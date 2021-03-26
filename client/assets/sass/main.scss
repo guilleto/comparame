@@ -3,6 +3,7 @@ $color-primary:rgb(255, 79, 90);
 $color-second:rgb(188, 52, 62);
 $color-text:rgb(128, 128, 128);
 $color-fondo:#fff;
+$color-box:#e4e0e0;
 *{
     margin: 0;
     padding: 0;
@@ -38,9 +39,14 @@ form{
     margin: auto;
 
 }
-label,h1,h2,button,.input{
-    font-family: 'Quicksand', sans-serif;
+label,h1,h2,button,.input,a{
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
+}
+a{
+    &:hover{
+        color:$color-text;
+    }
 }
 h2{
     color: $color-text;
@@ -59,12 +65,12 @@ label{
 }
 .input{
     outline: 0;
-    border: solid 1px $color-text;
+    border: solid 1px $color-box;
     height:40px;
     width: 90%;
     background:#fff ;
     margin: 10px;
-    box-shadow: 1px 1px 4px 0px $color-text;
+    box-shadow: 1px 1px 4px 0px $color-box;
     font-weight: bold;
     color: $color-text;
     padding-left: 1rem;
@@ -81,6 +87,7 @@ label,.input{
 }
 .label-check{
     margin-left: 0;
+    font-weight: 500;
 }
 .check,.label-check{
     flex-direction: row;
@@ -110,6 +117,28 @@ label,.input{
     align-items: center;
     justify-content: space-evenly;
     font-weight: bold;
+    outline: none;
+    &:active{
+        border: #7E1919 ;
+    }
+    a{
+        text-decoration: none;
+        color: $color-fondo;
+    }
+}
+.registrar{
+    &:hover{
+        background: #C70039 ;
+        box-shadow: 3px 2px 12px #c70039;
+        border: #900C3F;
+    }
+}
+.ingresar{
+    &:hover{
+        background: #581845 ;
+        box-shadow: 3px 2px 12px #581845;
+        border: #F82605 ;
+    }
 }
 .registro{
     display: flex;
@@ -118,7 +147,7 @@ label,.input{
     flex-direction: column;
 }
 .fab{
-    font-size: 25px;
+    font-size: 35px;
     color: $color-text;
     width: 50%;
 }
