@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import path from "path";
+import { Upload } from "./Middlewares/Upload";
 
 // Use only in development mode.
 import morgan from "morgan";
@@ -15,6 +17,9 @@ app.use(helmet());
 
 // Help with routes information
 app.use(morgan("combined"));
+
+// Set default storage
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Allow and parse json objects
 app.use(express.json());
