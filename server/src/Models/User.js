@@ -43,6 +43,12 @@ const userSchema = new Schema({
         latitude: Number,
         longitude: Number,
     },
+    favorite_products: [
+        {
+            type: Types.ObjectId,
+            ref: "Product"
+        }
+    ]
 });
 
 userSchema.methods.confirmPassword = function (password) {
