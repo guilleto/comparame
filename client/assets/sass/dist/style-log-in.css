@@ -1,11 +1,9 @@
-.forget-password{
-  display: flex;
-  justify-content: center;
-}
 .link-password {
+  margin: 5rem;
   font-weight: 300;
   color: #BDB7B7;
   text-decoration: none;
+  text-align: center;
 }
 
 h1 {
@@ -15,9 +13,4 @@ h1 {
 .registro {
   margin-top: 1rem;
   margin-bottom: 3rem;
-}
-@media (min-width:750px){
-  .forget-password{
-    width: 92%;
-  }
 }
