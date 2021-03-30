@@ -1,6 +1,4 @@
-const mongoose = require('mongoose')
 const User = require('../Models/User')
-const jwt = require("jsonwebtoken");
 
 exports.user_signup = (req, res, next) => {
     User.find({ email: req.body.Email })
