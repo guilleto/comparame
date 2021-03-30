@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$color-primary:rgb(255, 79, 90);
+$color-second:rgb(188, 52, 62);
+$color-text:rgb(128, 128, 128);
+$color-fondo:#fff;
+$color-box:#e4e0e0;
+$color-dark:#000;
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+a,.input-search{
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-nav{
+    border-bottom:solid 1px $color-text;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    .nav-left{
+        display: flex;
+        align-items: center;
+        .ctn-input-search{
+            position: relative;
+            .button-search,.input-search{
+                height: 40px;
+                margin-left: 20px;
+                outline: none;
+            }
+            .input-search{
+                padding-left: 15px;
+                width: 230px;
+                border-radius: 15px;
+                border:solid 1px $color-text;
+                font-weight: 200;
+                letter-spacing: 1px;
+            }
+            .button-search{
+                right:1rem;
+                position: absolute;
+                background: transparent;
+                border: none;
+                i{
+                    color: $color-text;
+                    font-size: 22px;
+                }
+            }
+        }
+        .img-logo{
+        height:40px ;
+        }
+
+    }
+    .button-nav{
+        width: 100px;
+        height: 40px;
+        background: $color-text;
+        border: none;
+        &:hover{
+            background: $color-box;
+            a{
+                color: $color-dark;
+            }
+        }
+        a{
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+    }
+}
+
+.category,.view-map{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .view-map{
+        position: relative;
+        .siwtch{
+             height: 20px;
+             width: 50px;   
+            .siwtch-check{
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            span{
+                width: 25px;
+                height: 100%;
+                position: absolute;
+                background: $color-primary;
+                content: "";
+            }
+        }
+    }
+}
+.category{
+    width: 33%;
+    
+
+}
