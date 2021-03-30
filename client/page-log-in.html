@@ -16,10 +16,10 @@
 </head>
 <body>
     <div class="ctn-form">
-        <form action="">
+        <form action="" method="POST" id="form-sign">
             <h1>Iniciar Sesión</h1>
             <label for="">Email</label>
-            <input type="email" name="" class="input email"  >
+            <input type="email" name="" class="input email" id="input_email" >
             <label for="">Contraseña</label>
             <div class="ctn-password">
                 <input type="password" name="" id="input-password" class="input password"  />
@@ -35,16 +35,19 @@
                     <i class="fab fa-facebook"></i>
                 </div>
             </div>
+            <span class="text-validar" id="note_error">
+                Informacion no valida
+            </span>
             <div class="ctn-bottons">
-                <button type="submit" class="registrar"><a href="page-log-up.html">Registrarse</a></button>
-                <button class="ingresar">Iniciar</button>
+                <button type="button" class="registrar"><a href="page-log-up.html">Registrarse</a></button>
+                <button type="submit" class="ingresar">Iniciar</button>
             </div>
         </form>
     </div>
     <div class="ctn-img">
         <img src="assets/img/Creativity-cuate.svg"alt="">
     </div>
-    <script src="assets/js/app.js">
-    </script>
+    <script src="assets/js/validateSign_in.js"></script>
+    <script src="assets/js/app.js"> </script>
 </body>
 </html>
