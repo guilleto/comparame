@@ -1,8 +1,9 @@
 import { model, Schema } from "mongoose";
+import { allowedRols } from "../config";
 
 const rolSchema = new Schema({
     rolName: {
-        type: ["admin", "supermaker", "client"],
+        type: allowedRols,
         default: "client",
     },
     created_at: {
@@ -11,7 +12,7 @@ const rolSchema = new Schema({
     },
     updated_at: {
         type: Date,
-        default: null,
+        default: new Date(),
     },
 });
 

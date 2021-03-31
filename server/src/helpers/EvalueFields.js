@@ -4,7 +4,7 @@ export const EvalueFields = (fields) => {
         if (field["value"]) {
             switch (typeof field["value"]) {
                 case "string":
-                    if (fields["value"].length < 1) {
+                    if (field["value"].length < 1) {
                         errors.push(field["name"]);
                     }
                     break;
@@ -15,7 +15,7 @@ export const EvalueFields = (fields) => {
             errors.push(field["name"]);
         }
     });
-    
+
     if (errors.length > 0) {
         return {
             status: false,

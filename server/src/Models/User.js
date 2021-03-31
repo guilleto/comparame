@@ -1,8 +1,8 @@
 import { Schema, model, Types } from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const userSchema = new Schema({
-    rols: {
+    rol: {
         type: Types.ObjectId,
         ref: "Rol",
         required: true,
@@ -25,11 +25,11 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    name: {
+    first_name: {
         type: String,
         required: true,
     },
-    lastname: {
+    last_name: {
         type: String,
         required: true,
     },
@@ -55,8 +55,9 @@ userSchema.methods.confirmPassword = function (password) {
     return bcrypt.compare(password, this.password);
 };
 
-userSchema.methods.encryptPassword = (password) => {
-    const salt = bcrypt.genSalt(10);
+userSchema.methods.encryptPassword = async (password) => {
+    
+    const salt = await bcrypt.genSalt(10);
     return bcrypt.hash(password, salt);
 };
 
