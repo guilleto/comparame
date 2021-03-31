@@ -1,6 +1,6 @@
 const planMethods = {};
 import Permission from "../Middlewares/AccessControl";
-import { EvalueFields } from "../helpers";
+import { EvalueFields } from "../Helpers";
 import Plan from "../Models/Plan";
 
 /**
