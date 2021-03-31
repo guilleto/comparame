@@ -1,0 +1,10 @@
+#sass
+#.sass-cache
+/sass
+/.sass-cache
+/.vscode
+/dist
+#dist
+/main.scss
+/style-log-in.s
+/style-index.scss

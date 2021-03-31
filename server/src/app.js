@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import path from "path";
-import { Upload } from "./Middlewares/Upload";
+import { PlanRoutes } from "./routes";
 
 // Use only in development mode.
 import morgan from "morgan";
@@ -24,5 +24,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Allow and parse json objects
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Set routes
+app.use("/plan", PlanRoutes);
 
 export default app;
