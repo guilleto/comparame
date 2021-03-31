@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <div class="ctn-form">
+        <h1>Crear Cuenta</h1>
+        <form action="" method="post" id="form" >
+            <label for="">Nombres</label>
+            <div class="ctn">    
+                <input type="text" name="Name" id="input_name" class="input">
+                <i  id="icon_name"></i>
+            </div>
+            <label for="">Apellidos</label>
+            <div class="ctn">
+                <input type="text" name="lastname" id="input_lastName" class="input">
+                <i  id="icon_lastname"></i>
+            </div>
+            <label for="">Nombre Usuario</label>
+            <div id="ctn_userName" class="ctn">
+                <input type="text" name="userName" id="input_userName" class="input text" />
+                <i id="icon_userName"></i>
+                <span  id="note_userName" class="note nt-username">
+                    El nombre de usuario solo puede contener letras, numeros, caracteres ( _, -, / )  
+                </span>
+                <span class="note nt-check-user" id="check_user">
+                    El nombre de usuario ya existe
+                </span>
+                
+            </div>
+            <label for="">Email</label>
+            <div id="ctn-email" class="ctn">
+                <input type="email" name="email" id="input_email" class="input email" />
+                <i id="icon_email" ></i>
+            </div>
+            <label for="">Contraseña</label>
+            <div class="ctn-password ctn">
+                <input type="password" name="password" id="input-password" class="input password" />
+                <i class="far fa-eye" id="icon-hidden"></i>
+                <span class="note nt-password" id="note_password">
+                    La contraseña  debe ser mayor a cuatro
+                </span>
+            </div>
+            <div class="registro">
+                <h2>O registrate con </h2>
+                <div class="icon-social">
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </div>
+            <div class="ctn-terminos">
+                <input type="checkbox" name="" class="input check" />
+                <label for="" class="label-check">Termino y condiciones</label>
+            </div>
+            <span class="text-validar" id="message_error">
+                   Informacion invalidad, rectifica los campos 
+            </span>
+            <div class="ctn-bottons">
+                <button type="submit" class="registrar">Registrarse</button>
+                <button type="button" class="ingresar"><a href="page-log-in.html">Ingresar</a></button>
+            </div>
+        </form>
+    </div>
+    <div class="ctn-img">
+        <img src="./assets/img/Creativity-pana.svg" alt="" />
+    </div>
+</body>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/validarForm.js"></script>
+
+</html>
