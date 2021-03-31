@@ -15,6 +15,7 @@ const uri =
     mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true
     });
 
     db.on("open", () => {
