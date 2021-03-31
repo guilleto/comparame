@@ -1,11 +1,12 @@
 import express from "express";
 import { RolController } from "../controllers";
+import { AuthMiddleware } from "../Middlewares/AuthMiddleware";
 const router = express.Router();
 
 router
-    .get("/", RolController.getRols)
-    .post("/", RolController.createRol)
-    .put("/", RolController.updateRol)
-    .delete("/", RolController.deleteRol);
+    .get("/", AuthMiddleware, RolController.getRols)
+    .post("/", AuthMiddleware, RolController.createRol)
+    .put("/", AuthMiddleware, RolController.updateRol)
+    .delete("/", AuthMiddleware, RolController.deleteRol);
 
 export { router as RolRoutes };

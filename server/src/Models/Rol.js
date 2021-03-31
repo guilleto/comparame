@@ -3,7 +3,8 @@ import { allowedRols } from "../config";
 
 const rolSchema = new Schema({
     rolName: {
-        type: allowedRols,
+        type: String,
+        enum: allowedRols,
         default: "client",
     },
     created_at: {
