@@ -7,4 +7,7 @@
 #dist
 /main.scss
 /style-log-in.s
-/style-index.scss
+*.scss
+/.scss
+/index.dev.js
+
