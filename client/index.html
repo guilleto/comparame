@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets//css/style-index/dist/style-index.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets//css/style-index/dist/style-index.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
@@ -19,9 +19,9 @@
     <head>
         <nav class="menu-nav">
             <div class="nav-left">
-                <img src="assets/img/logo-comparame.png" class="img-logo" alt="">
+                <img src="assets/img/logo-comparame.png" class="img-logo" alt="" />
                 <div class="ctn-input-search">
-                    <input type="search" name="" id="input-search" class="input-search">
+                    <input type="search" name="" id="input-search" class="input-search" />
                     <button class="button-search">
                         <i class="fas fa-search"></i>
                     </button>
@@ -29,29 +29,123 @@
             </div>
 
             <button class="button-nav">
-                <a href="page-log-up.html">
-                    Ingresar
-                </a>
+                <a href="page-log-up.html"> Ingresar </a>
             </button>
         </nav>
     </head>
     <section class="main">
         <section class="category">
             <div class="view-map">
-                <h2>mostrar mapa</h2>
+                <h2>Mostrar mapa</h2>
                 <div class="siwtch">
-                    <input type="checkbox" name="" class="siwtch-check">
-                    <span class="on-siwtch">
-                    </span>
+                    <input type="checkbox" id="check-category" class="siwtch-check" />
+                    <label class="on-siwtch" for="check-category"> </label>
+                </div>
+            </div>
+            <h2>Categorias</h2>
+            <div class="select-category">
+                <button type="button" class="btn lugar">Lugar</button>
+                <button type="button" class="btn producto">Producto</button>
+            </div>
+            <h2>tipo</h2>
+            <div class="type-category">
+                <div class="label-check-category">
+                    <label for="productos_granos">Granos</label>
+                    <label for="productos_pastas">Pastas</label>
+                    <label for="productos_limpieza">limpieza</label>
+                    <label for="productos_personale">personales</label>
+                </div>
+                <div class="input-check-category">
+                    <input type="checkbox" name="" id="productos_granos"/>
+                    <input type="checkbox" name="" id="productos_pastas" />
+                    <input type="checkbox" name="" id="productos_limpieza" />
+                    <input type="checkbox" name="" id="productos_personale" />
+                </div>
+            </div>
+            <h2>rango 
+                <span>
+                    precio
+                </span> 
+            </h2>
+            <div class="range-price">
+                <span>0</span>
+                <input type="range"  id="range_Price" min="0" max="50000">
+                <span>50.000</span>
+            </div>
+            <div class="price-total" id="result_price">
+
+            </div>
+            <h2>estrellas</h2>
+            <div class="star">
+                <div class="star" id="Uno">1 - 2</div>
+                <div class="star" id="Dos">3</div>
+                <div class="star" id="Tres">4 - 5</div>
+            </div>
+        </section>
+        <section class="ctn-map">
+            <div class="map" id="map"></div>
+        </section>
+        <section class="contens">
+            <h2>resultado</h2>
+            <span class="resul-search" id="result_search">
+            </span>
+            <div class="ctn-result">
+                <img src="assets/img/img-producto.jpg" alt="">
+                <div class="ctn-info">
+                    <div class="title-result">
+                        <h3>titulo</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="num-star">
+                        <i class="far fa-star"></i> 
+                        <span>5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ctn-result">
+                <img src="assets/img/img-producto.jpg" alt="">
+                <div class="ctn-info">
+                    <div class="title-result">
+                        <h3>titulo</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="num-star">
+                        <i class="far fa-star"></i> 
+                        <span>5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ctn-result">
+                <img src="assets/img/img-producto.jpg" alt="">
+                <div class="ctn-info">
+                    <div class="title-result">
+                        <h3>titulo</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="num-star">
+                        <i class="far fa-star"></i> 
+                        <span>5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ctn-result">
+                <img src="assets/img/img-producto.jpg" alt="">
+                <div class="ctn-info">
+                    <div class="title-result">
+                        <h3>titulo</h3>
+                        <p>desciption</p>
+                    </div>
+                    <div class="num-star">
+                        <i class="far fa-star"></i> 
+                        <span>5</span>
+                    </div>
                 </div>
             </div>
 
 
-
         </section>
-        <section class="map"></section>
-        <section class="contens"></section>
     </section>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
