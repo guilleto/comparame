@@ -1,0 +1,440 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 20px;
+}
+.header .logo {
+  width: 100px;
+}
+.header .logo .img-logo {
+  width: 100%;
+}
+.header .menu-container .menu-check {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.header .menu-container .menu-check:checked ~ label .icon-menu {
+  display: none;
+}
+.header .menu-container .menu-check:checked ~ label .closed {
+  display: block;
+}
+.header .menu-container .menu-check:checked ~ .menuSinLogin {
+  display: block;
+}
+.header .menu-container .icon-menu {
+  cursor: pointer;
+}
+.header .menu-container .icon-menu .fas {
+  font-size: 30px;
+  color: #ff4f5a;
+}
+.header .menu-container .closed .fas {
+  font-size: 30px;
+  color: #ff4f5a;
+}
+.header .menu-container .closed, .header .menu-container .menuLogin, .header .menu-container .menuSinLogin {
+  display: none;
+}
+.header .menu-container .menuSinLogin, .header .menu-container .menuLogin {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: rgba(255, 79, 90, 0.9);
+  width: 100%;
+  height: 100%;
+}
+.header .menu-container .menuSinLogin .con-item, .header .menu-container .menuLogin .con-item {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  line-height: 30px;
+  border-bottom: 1px solid #bc343e;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.search .div-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  height: 40px;
+  width: 70%;
+  border-radius: 15px;
+}
+.search .div-search .fas {
+  color: #ff4f5a;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.search .div-search .inp-search {
+  border: white;
+  outline: none;
+  border-radius: 10px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: gray;
+  line-height: 23px;
+}
+.search .filtrer {
+  border: 1px solid gray;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search .filtrer .fas {
+  color: #ff4f5a;
+  font-size: 20px;
+}
+.search .filtrer:hover {
+  background: #ff4f5a;
+  border: 1px solid #ff4f5a;
+}
+.search .filtrer:hover .fas {
+  color: #fff;
+}
+
+.secciones {
+  margin: 20px;
+}
+.secciones .cont-secciones {
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.secciones .cont-secciones .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px 10px 0;
+  height: 40px;
+  border: 1px solid gray;
+  min-width: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.secciones .cont-secciones .section:hover {
+  background: #ff4f5a;
+  color: white;
+  border: 1px solid #ff4f5a;
+}
+.secciones .cont-secciones .section:hover .fas {
+  color: white;
+}
+.secciones .cont-secciones .section:hover .text {
+  color: white;
+}
+.secciones .cont-secciones .section .fas {
+  color: #ff4f5a;
+  padding: 5px;
+}
+.secciones .cont-secciones .section .text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: gray;
+  text-align: center;
+  line-height: 23px;
+}
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 0 20px;
+}
+.popular .title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+}
+.popular .title .text {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  line-height: 23px;
+}
+.popular .title .more {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #ff4f5a;
+  line-height: 23px;
+}
+.popular .content-card {
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.popular .content-card .popular-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  box-shadow: 1px 7px 14px -7px gray;
+  cursor: pointer;
+}
+.popular .content-card .popular-card .img {
+  width: 100%;
+  border-radius: 20px;
+}
+.popular .content-card .popular-card .name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  line-height: 23px;
+  margin: 5px 0 0 10px;
+}
+.popular .content-card .popular-card .ubicacion {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 0 10px;
+  height: 10px;
+}
+.popular .content-card .popular-card .ubicacion .fas {
+  font-size: 12px;
+  color: #ff4f5a;
+  margin: 0 3px 0 0;
+}
+.popular .content-card .popular-card .ubicacion .tienda {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: gray;
+  line-height: 23px;
+}
+.popular .content-card .popular-card .precio {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ff4f5a;
+  line-height: 23px;
+  margin: 10px 0 20px 10px;
+}
+
+.ofertas {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 20px 20px 0 20px;
+}
+.ofertas .title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+}
+.ofertas .title .text {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  line-height: 23px;
+}
+.ofertas .title .more {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #ff4f5a;
+  line-height: 23px;
+}
+.ofertas .content-card {
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.ofertas .content-card .ofertas-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  box-shadow: 1px 7px 14px -7px gray;
+  cursor: pointer;
+}
+.ofertas .content-card .ofertas-card .img {
+  width: 100%;
+  border-radius: 20px;
+}
+.ofertas .content-card .ofertas-card .name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  line-height: 23px;
+  margin: 5px 0 0 10px;
+}
+.ofertas .content-card .ofertas-card .ubicacion {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 0 10px;
+  height: 10px;
+}
+.ofertas .content-card .ofertas-card .ubicacion .fas {
+  font-size: 12px;
+  color: #ff4f5a;
+  margin: 0 3px 0 0;
+}
+.ofertas .content-card .ofertas-card .ubicacion .tienda {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: gray;
+  line-height: 23px;
+}
+.ofertas .content-card .ofertas-card .precio {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ff4f5a;
+  line-height: 23px;
+  margin: 10px 0 20px 10px;
+}
+
+.tiendas {
+  padding: 20px;
+}
+.tiendas .text {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  line-height: 23px;
+}
+.tiendas .mapa {
+  width: 100%;
+  height: 300px;
+  background: #bc343e;
+  border-radius: 15px;
+}
+
+.footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: gray;
+  line-height: 23px;
+}
+.footer .icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.footer .icons .fab {
+  font-size: 20px;
+  color: gray;
+}
+.footer .icons .fab:hover {
+  color: #636363;
+}
+.footer .rights {
+  margin: 10px 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: gray;
+  line-height: 23px;
+}
+
+@media (min-width: 768px) {
+  .header .logo {
+    width: 200px;
+  }
+  .header .menu-container .menu-check, .header .menu-container .icon-menu, .header .menu-container .closed {
+    display: none;
+  }
+  .header .menu-container .menuSinLogin, .header .menu-container .menuLogin {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
+  }
+  .header .menu-container .menuSinLogin .con-item, .header .menu-container .menuLogin .con-item {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: gray;
+    line-height: 16px;
+    letter-spacing: 0;
+    border: none;
+  }
+  .header .menu-container .menuLogin {
+    display: none;
+  }
+
+  .search .div-search {
+    width: 50%;
+  }
+  .search .filtrer {
+    width: 50px;
+    height: 50px;
+  }
+  .search .filtrer .fas {
+    font-size: 30px;
+  }
+
+  .secciones {
+    margin: 20px;
+  }
+
+  .popular .title .text {
+    font-size: 20px;
+  }
+  .popular .title .more {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
