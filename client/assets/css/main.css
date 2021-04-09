@@ -16,10 +16,7 @@ body {
   margin: auto;
   align-items: center;
 }
-.ctn{
-  width: 100%;
-  position: relative;
-}
+
 .ctn-form, .ctn-img, .icon-social {
   display: flex;
 }
@@ -40,29 +37,6 @@ form {
   height: 100%;
   margin: auto;
 }
-.note,.text-validar {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  margin:1rem;
-  line-height: 1.5;
- border: solid 0.5px #e4e0e0;
- width: 90%;
- display: none;
-}
-.text-validar,.nt-password,.nt-check-user{
-    background: red;
-    font-weight: 500;
-    color: #fff;
-    padding: 6px;
-    text-align: center;
-}
-.nt-password,nt-check-user{
- border: 0.5px solid #F32D05;
-}
-.nt-username{
-  box-shadow: 1px 1px 4px 0px #e4e0e0;
-}
-
 
 label, h1, h2, button, .input, a {
   font-family: "Roboto", sans-serif;
@@ -91,7 +65,6 @@ label {
 }
 
 .input {
-  position: relative;
   outline: 0;
   border: solid 1px #e4e0e0;
   height: 40px;
@@ -172,7 +145,7 @@ label, .input {
 }
 
 .ingresar:hover {
-  background:  #c41157 ;
+  background: #581845;
   box-shadow: 3px 2px 12px #581845;
   border: #F82605;
 }
@@ -205,12 +178,29 @@ label, .input {
   width: auto;
   height: auto;
 }
- .far {
+.ctn-password i {
   position: absolute;
   margin: auto;
   top: 22px;
   right: 3rem;
   color: gray;
+}
+
+.link-password {
+  margin: 5rem;
+  font-weight: 300;
+  color: #BDB7B7;
+  text-decoration: none;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 6rem;
+}
+
+.registro {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -271,7 +261,9 @@ label, .input {
     font-size: 35px;
   }
 
-  .far {
+  .ctn-password i {
     right: 5rem;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
