@@ -17,8 +17,11 @@
 
 <body>
     <div class="ctn-form">
-        <h1>Crear Cuenta</h1>
+        <a href="#" class="icon-logo">
+            <img src="assets/img/logo-comparame.png" alt="">
+        </a>
         <form action="" method="post" id="form" >
+            <h1>Crear Cuenta</h1>
             <label for="">Nombres</label>
             <div class="ctn">    
                 <input type="text" name="Name" id="input_name" class="input">
@@ -54,6 +57,12 @@
                     La contraseña  debe ser mayor a cuatro
                 </span>
             </div>
+            <div class="rol">
+                <label for="mall"></label>
+                <input type="radio" name="rol" id="mall">
+                <label for="client"></label>
+                <input type="radio" name="rol" id="client">
+            </div>
             <div class="registro">
                 <h2>O registrate con </h2>
                 <div class="icon-social">
@@ -65,7 +74,7 @@
                 <input type="checkbox" name="" class="input check" />
                 <label for="" class="label-check">Termino y condiciones</label>
             </div>
-            <span class="text-validar" id="message_error">
+            <span class="text-validar note" id="message_error">
                    Informacion invalidad, rectifica los campos 
             </span>
             <div class="ctn-bottons">
