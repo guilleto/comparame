@@ -9,6 +9,9 @@ body {
   padding: 0;
   margin: 0;
 }
+h2,span{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .header {
   display: flex;
@@ -436,5 +439,7 @@ body {
     font-size: 15px;
   }
 }
-
+.destok{
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */
