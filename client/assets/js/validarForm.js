@@ -68,15 +68,15 @@ input_name.addEventListener("input", () => {
 });
 //validar campo de apellido
 input_lastName.addEventListener("input", () => {
-  if (input_name.value.length > 0) {
+  if (input_lastName.value.length > 0) {
     campos.lastname = true;
     show_right("input_lastName", "icon_lastname");
-    if (expreciones.name.test(input_name.value) == false) {
+    if (expreciones.name.test(input_lastName.value) == false) {
       campos.lastname = false;
       show_wrong("input_lastName", "icon_lastname");
     }
   } else {
-    input_name.style.borderColor = " #e4e0e0";
+    input_lastName.style.borderColor = " #e4e0e0";
     document
       .getElementById("icon_lastname")
       .classList.remove("fa-times-circle", "fa-check-circle");
@@ -168,6 +168,21 @@ form.addEventListener("submit", (e) => {
     campos.email &&
     campos.password
   ) {
+    fetch('https://comparame-api.herokuapp.com/'),{
+      method: 'POST',
+      Header:{
+       'content-type' : 'application/json'
+      },
+      body: {
+        "rolID": input_name.value,
+        "username": "Medi",
+        "email": "ccfranm17@gmail.com",
+        "password": "123456",
+        "first_name": "Cristian",
+        "last_name": "Medina"
+      }
+    }
+        
   } else {
     e.preventDefault();
     messega_error.style.display = "inline-block";

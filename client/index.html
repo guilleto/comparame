@@ -1,151 +1,240 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets//css/style-index/dist/style-index.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="assets/sass/dist/style-main-index.css">
     <title>Inicio</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html"><img class="img-logo" src="./assets/img/logo-comparame.png" alt=""></a>
+        </div>
+        <div class="menu-container">
+            <input type="checkbox" class="menu-check" id="menu-check">
+            <label for="menu-check">
+                <span class="icon-menu">
+                    <i class="fas fa-home"></i>
+                </span>
+                <span class="closed">
+                    <i class="fas fa-times"></i>
+                </span>
+            </label>
+            <div class="menuSinLogin">
+                <a class="con-item" href="./login.html">Ingresar</a>
+                <a class="con-item" href="#">Registrarse</a>
+            </div>
+            <div class="menuLogin">
+                <a class="con-item" href="#">Mi cuenta</a>
+                <a class="con-item" href="#">Favoritos</a>
+                <a class="con-item" href="#">Mi lista</a>
+                <a class="con-item" href="#">Cerrar sesión</a>
+            </div>
+        </div>
+    </header>
+    <section class="search">
+        <div class="div-search">
+            <i class="fas fa-search"></i>
+            <input type="text" class="inp-search">
+        </div>
+        <div class="filtrer">
+            <i class="fas fa-sliders-h"></i>
+        </div>
+    </section>
+    <section class="container-content">
 
-    <head>
-        <nav class="menu-nav">
-            <div class="nav-left">
-                <img src="assets/img/logo-comparame.png" class="img-logo" alt="" />
-                <div class="ctn-input-search">
-                    <input type="search" name="" id="input-search" class="input-search" />
-                    <button class="button-search">
-                        <i class="fas fa-search"></i>
-                    </button>
+        <section class="secciones">
+            <h2 class="destok title-category">Categorias</h2>
+            <div class="cont-secciones">
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
+                </div>
+                <div class="section">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="text">Lacteos</p>
                 </div>
             </div>
-
-            <button class="button-nav">
-                <a href="page-log-up.html"> Ingresar </a>
-            </button>
-        </nav>
-    </head>
-    <section class="main">
-        <section class="category">
-            <div class="view-map">
-                <h2>Mostrar mapa</h2>
-                <div class="siwtch">
-                    <input type="checkbox" id="check-category" class="siwtch-check" />
-                    <label class="on-siwtch" for="check-category"> </label>
+            <div class="destok">
+                <h2>Rango
+                    <span>
+                        precio
+                    </span>
+                </h2>
+                <div class="range-price">
+                    <span>0</span>
+                    <input type="range" id="range_Price" min="0" max="50000">
+                    <span>50.000</span>
                 </div>
-            </div>
-            <h2>Categorias</h2>
-            <div class="select-category">
-                <button type="button" class="btn lugar">Lugar</button>
-                <button type="button" class="btn producto">Producto</button>
-            </div>
-            <h2>tipo</h2>
-            <div class="type-category">
-                <div class="label-check-category">
-                    <label for="productos_granos">Granos</label>
-                    <label for="productos_pastas">Pastas</label>
-                    <label for="productos_limpieza">limpieza</label>
-                    <label for="productos_personale">personales</label>
-                </div>
-                <div class="input-check-category">
-                    <input type="checkbox" name="" id="productos_granos"/>
-                    <input type="checkbox" name="" id="productos_pastas" />
-                    <input type="checkbox" name="" id="productos_limpieza" />
-                    <input type="checkbox" name="" id="productos_personale" />
-                </div>
-            </div>
-            <h2>rango 
-                <span>
-                    precio
-                </span> 
-            </h2>
-            <div class="range-price">
-                <span>0</span>
-                <input type="range"  id="range_Price" min="0" max="50000">
-                <span>50.000</span>
-            </div>
-            <div class="price-total" id="result_price">
-
-            </div>
-            <h2>estrellas</h2>
-            <div class="star">
-                <div class="star" id="Uno">1 - 2</div>
-                <div class="star" id="Dos">3</div>
-                <div class="star" id="Tres">4 - 5</div>
-            </div>
+                <div class="price-total" id="result_price"></div>
+                    <h2>Estrellas</h2>
+                    <div class="star">
+                        <div class="star" id="Uno">1 - 2</div>
+                        <div class="star" id="Dos">3</div>
+                        <div class="star" id="Tres">4 - 5</div>
+                    </div>
+                    </div>
         </section>
-        <section class="ctn-map">
-            <div class="map" id="map"></div>
+        <section class="container-offert">
+
+            <section class="popular">
+                <div class="title">
+                    <p class="text">Productos populares</p>
+                    <p class="more">View all</p>
+                </div>
+                <div class="content-card">
+                    <div class="popular-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="popular-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="popular-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="popular-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="popular-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                </div>
+            </section>
+            <section class="ofertas">
+                <div class="title">
+                    <p class="text">Productos en oferta</p>
+                    <p class="more">View all</p>
+                </div>
+                <div class="content-card">
+                    <div class="ofertas-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="ofertas-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="ofertas-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="ofertas-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                    <div class="ofertas-card">
+                        <img class="img" src="./assets/img/huevos.jpg" alt="">
+                        <p class="name">Gaseosa</p>
+                        <div class="ubicacion">
+                            <i class="fas fa-location-arrow"></i>
+                            <p class="tienda">Exito, Soacha</p>
+                        </div>
+                        <p class="precio">$5000</p>
+                    </div>
+                </div>
+            </section>
         </section>
-        <section class="contens">
-            <h2>resultado</h2>
-            <span class="resul-search" id="result_search">
-            </span>
-            <div class="ctn-result">
-                <img src="assets/img/img-producto.jpg" alt="">
-                <div class="ctn-info">
-                    <div class="title-result">
-                        <h3>titulo</h3>
-                        <p>desciption</p>
-                    </div>
-                    <div class="num-star">
-                        <i class="far fa-star"></i> 
-                        <span>5</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ctn-result">
-                <img src="assets/img/img-producto.jpg" alt="">
-                <div class="ctn-info">
-                    <div class="title-result">
-                        <h3>titulo</h3>
-                        <p>desciption</p>
-                    </div>
-                    <div class="num-star">
-                        <i class="far fa-star"></i> 
-                        <span>5</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ctn-result">
-                <img src="assets/img/img-producto.jpg" alt="">
-                <div class="ctn-info">
-                    <div class="title-result">
-                        <h3>titulo</h3>
-                        <p>desciption</p>
-                    </div>
-                    <div class="num-star">
-                        <i class="far fa-star"></i> 
-                        <span>5</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ctn-result">
-                <img src="assets/img/img-producto.jpg" alt="">
-                <div class="ctn-info">
-                    <div class="title-result">
-                        <h3>titulo</h3>
-                        <p>desciption</p>
-                    </div>
-                    <div class="num-star">
-                        <i class="far fa-star"></i> 
-                        <span>5</span>
-                    </div>
-                </div>
-            </div>
-
-
+        <section class="tiendas">
+            <div class="text">Consulte las tiendas más cercanas</div>
+            <div class="mapa"></div>
         </section>
     </section>
-    <script src="assets/js/index.js"></script>
+    <footer class="footer">
+        <div class="social-media">
+            <p class="text">Compartir en:</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/" id="facebook" class="facebook link">
+                    <i class="fab fa-facebook-f icon"></i>
+                </a>
+                <a href="https://twitter.com/?lang=es" id="twitter" class="twitter link">
+                    <i class="fab fa-twitter icon"></i>
+                </a>
+                <a href="https://www.instagram.com/" id="instagram" class="instagram link">
+                    <i class="fab fa-instagram icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="rights">© Comparame 2021 All Rights Reserved.</div>
+    </footer>
 </body>
 
 </html>
