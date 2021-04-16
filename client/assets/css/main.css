@@ -45,7 +45,12 @@ label, h1, h2, button, .input, a {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-
+.ctn-rol h2{
+  font-weight: 500;
+}
+.ctn-rol label{
+  font-weight: 300;
+}
 a:hover {
   color: gray;
 }
@@ -173,12 +178,12 @@ label, .input {
   align-items: center;
 }
 
-.ctn-password {
+.ctn {
   position: relative;
   width: auto;
   height: auto;
 }
-.ctn-password i {
+ i {
   position: absolute;
   margin: auto;
   top: 22px;
@@ -229,7 +234,7 @@ h1 {
     width: 80%;
   }
 
-  label, .input {
+  label, .input,h2 {
     margin-left: 2rem;
   }
 
@@ -264,7 +269,7 @@ h1 {
     font-size: 35px;
   }
 
-  .ctn-password i {
+   i {
     right: 5rem;
   }
 }
