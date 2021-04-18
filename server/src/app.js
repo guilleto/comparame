@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import path from "path";
+import { PlanRoutes, UserRoute, RolRoutes } from "./routes";
 
 // Use only in development mode.
 import morgan from "morgan";
@@ -23,5 +24,10 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Allow and parse json objects
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Set routes
+app.use("/plan", PlanRoutes);
+app.use("/user", UserRoute);
+app.use("/rol", RolRoutes);
 
 export default app;

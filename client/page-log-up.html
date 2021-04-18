@@ -17,20 +17,55 @@
 
 <body>
     <div class="ctn-form">
-        <h1>Crear Cuenta</h1>
-        <form action="" method="post">
+        <a href="./index.html" class="icon-logo">
+            <img src="assets/img/logo-comparame.png" alt="">
+        </a>
+        <form action="" method="post" id="form" >
+            <h1>Crear Cuenta</h1>
             <label for="">Nombres</label>
-            <input type="text" name="" class="input">
+
+            <div class="ctn">    
+                <input type="text" name="Name" id="input_name" class="input">
+                <i  id="icon_name"></i>
+            </div>
+
             <label for="">Apellidos</label>
-            <input type="text" name="" id="" class="input">
+            <div class="ctn">
+                <input type="text" name="lastname" id="input_lastName" class="input">
+                <i  id="icon_lastname"></i>
+            </div>
             <label for="">Nombre Usuario</label>
-            <input type="text" class="input text" />
+            <div id="ctn_userName" class="ctn">
+                <input type="text" name="userName" id="input_userName" class="input text" />
+                <i id="icon_userName"></i>
+                <span  id="note_userName" class="note nt-username">
+                    El nombre de usuario solo puede contener letras, numeros, caracteres ( _, -, / )  
+                </span>
+                <span class="note nt-check-user" id="check_user">
+                    El nombre de usuario ya existe
+                </span>
+            </div>
             <label for="">Email</label>
-            <input type="email" name=""  class="input email" />
+            <div id="ctn-email" class="ctn">
+                <input type="email" name="email" id="input_email" class="input email" />
+                <i id="icon_email" ></i>
+            </div>
             <label for="">Contraseña</label>
-            <div class="ctn-password">
-                <input type="password" name="" id="input-password" class="input password"  />
+            <div class="ctn-password ctn">
+                <input type="password" name="password" id="input-password" class="input password" />
                 <i class="far fa-eye" id="icon-hidden"></i>
+                <span class="note nt-password" id="note_password">
+                    La contraseña  debe ser mayor a cuatro
+                </span>
+            </div>
+            <div class="ctn-rol">
+                <h2>Que tipo de usuario desea ser</h2>
+                <div class="rol">
+                    <label for="mall">Cliente</label>
+                    <input type="radio" name="rol" value="client" id="mall" class="slt-rol">
+                    <label for="client">Administrar</label>
+                    <input type="radio" name="rol" id="client" value="admin" class="slt-rol">
+                </div>
             </div>
             <div class="registro">
                 <h2>O registrate con </h2>
@@ -40,12 +75,15 @@
                 </div>
             </div>
             <div class="ctn-terminos">
-                <input type="checkbox" name=""  class="input check" />
+                <input type="checkbox" name="" id="input-terminos" class="input check" />
                 <label for="" class="label-check">Termino y condiciones</label>
             </div>
+            <span class="text-validar note" id="message_error">
+                   Informacion invalidad, rectifica los campos 
+            </span>
             <div class="ctn-bottons">
                 <button type="submit" class="registrar">Registrarse</button>
-                <button class="ingresar" ><a href="page-log-in.html">Ingresar</a></button>
+                <button type="button" class="ingresar"><a href="page-log-in.html">Ingresar</a></button>
             </div>
         </form>
     </div>
@@ -54,4 +92,6 @@
     </div>
 </body>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/validarForm.js"></script>
+<script src="assets/js/url.js"></script>
 </html>

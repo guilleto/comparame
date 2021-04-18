@@ -31,7 +31,10 @@ body {
   width: 100%;
   max-width: 375px;
 }
-
+.icon-logo img{
+  margin-top: 2rem;
+  height: 50px;
+}
 form {
   width: 100%;
   height: 100%;
@@ -42,7 +45,12 @@ label, h1, h2, button, .input, a {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-
+.ctn-rol h2{
+  font-weight: 500;
+}
+.ctn-rol label{
+  font-weight: 300;
+}
 a:hover {
   color: gray;
 }
@@ -151,10 +159,7 @@ label, .input {
 }
 
 .registro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+ display: none;
 }
 
 .fab {
@@ -173,17 +178,37 @@ label, .input {
   align-items: center;
 }
 
-.ctn-password {
+.ctn {
   position: relative;
   width: auto;
   height: auto;
 }
-.ctn-password i {
+ i {
   position: absolute;
   margin: auto;
   top: 22px;
   right: 3rem;
   color: gray;
+}
+
+.link-password {
+  margin: 5rem;
+  font-weight: 300;
+  color: #BDB7B7;
+  text-decoration: none;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 6rem;
+}
+
+.registro {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.note{
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -209,7 +234,7 @@ label, .input {
     width: 80%;
   }
 
-  label, .input {
+  label, .input,h2 {
     margin-left: 2rem;
   }
 
@@ -244,7 +269,9 @@ label, .input {
     font-size: 35px;
   }
 
-  .ctn-password i {
+   i {
     right: 5rem;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
