@@ -22,6 +22,8 @@ const input_userName = document.getElementById("input_userName");
 const input_email = document.getElementById("input_email");
 const input_terminos = document.getElementById('input-terminos')
 const input_rol = document.querySelectorAll('.slt-rol')
+const ctn_response_false = document.getElementById('ctn-response-false')
+const ctn_response_true = document.getElementById('ctn-response-true')
 //funcion para resalizar peticiones a la base datos
 async function resquet_BD(url) {
   const resp = await fetch(url);
@@ -92,23 +94,18 @@ const note_check_user = document.getElementById("check_user");
 input_userName.addEventListener("input", () => {
   note_userName.style.display = "none";
   note_check_user.style.display = "none";
-  // const resp = resquet_BD();
+  // const resp ;
   if (input_userName.value.length > 0) {
     if (
-      "carlos" == input_userName.value ||
       expreciones.username.test(input_userName.value) == false
     ) {
       campos.username = false;
       show_wrong("input_userName", "icon_userName");
       note_userName.style.display = "inline-block";
-      if ("carlos" == input_userName.value) {
-        note_userName.style.display = "none";
-        note_check_user.style.display = "inline-block";
-      }
-      if ("carlos" == input_userName.value) {
-        note_userName.style.display = "none";
-        note_check_user.style.display = "inline-block";
-      }
+      // if ( resp == input_userName.value) {
+      //   note_userName.style.display = "none";
+      //   note_check_user.style.display = "inline-block";
+      // }
     } else {
       campos.username = true;
       show_right("input_userName", "icon_userName");
@@ -172,21 +169,18 @@ async function resquet(){
 }
 resquet()
 let code_rol;
-input_rol[0].addEventListener('click', (e)=>{
-   const type_rol = e.target.value
+input_rol[0].addEventListener('click', ()=>{
+  //  const type_rol = e.target.value
    campos.rol = true
-   if(type_rol == "client" ){
-     code_rol = roles.data[0].id
-   }
+     code_rol = roles.data[0]._id
   }) 
-input_rol[1].addEventListener('click',(e)=>{
-  const type_rol = e.target.value
+input_rol[1].addEventListener('click',()=>{
+  // const type_rol = e.target.value
   campos.rol = true
-  if(type_rol == "admin"){
-    code_rol = roles.data[1].id
-  }
+    code_rol = roles.data[1]._id
 })
 form.addEventListener("submit", (e) => {
+  e.preventDefault()
   if (
     campos.name &&
     campos.lastname &&
@@ -197,10 +191,10 @@ form.addEventListener("submit", (e) => {
   ) {
     fetch('https://comparame-api.herokuapp.com/user/register',{
       method: 'POST',
-      Header:{
+      headers:{
        'content-type' : 'application/json'
       },
-      body: JSON.stringify({
+      body: JSON.stringify( {
         "rolID": code_rol,
         "username": input_userName.value,
         "email": input_email.value,
@@ -209,12 +203,26 @@ form.addEventListener("submit", (e) => {
         "last_name": input_lastName.value
       })
     })
-    .then(resp => resp.Json())
-    .then(data => console.log(data)
-    )
-        
+    .then(resp => resp.json())
+    .then((data) => {
+      const response = data;
+      console.log(data)
+      if(response.status == false ){
+        ctn_response_false.innerHTML = response.message
+        ctn_response_false.style.display = "inline-block"
+      }
+      if(response.status == true){
+        ctn_response_true.innerHTML = response.message
+        ctn_response_true.style.display = "inline-block"
+      }
+      // let
+      // if(data){
+
+      // }
+      }).catch((err)=>{
+      console.log('error en el registro '+ err)
+    })
   } else {
-    e.preventDefault();
     messega_error.style.display = "inline-block";
   }
 });
