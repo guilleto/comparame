@@ -12,6 +12,7 @@ var campos = {
   lastname: false,
   email: false,
   password: false,
+  rol:false
 };
 //inicializar variables
 const form = document.getElementById("form");
@@ -19,11 +20,13 @@ const input_name = document.getElementById("input_name");
 const input_lastName = document.getElementById("input_lastName");
 const input_userName = document.getElementById("input_userName");
 const input_email = document.getElementById("input_email");
+const input_terminos = document.getElementById('input-terminos')
+const input_rol = document.querySelectorAll('.slt-rol')
 //funcion para resalizar peticiones a la base datos
 async function resquet_BD(url) {
   const resp = await fetch(url);
   const res = await resp.json();
-  console.log(res);
+  return res
 }
 //functinon que me permite mostrar si esta correcto
 function show_right(input, icon) {
@@ -160,28 +163,55 @@ const messega_error = document.getElementById("message_error");
 form.addEventListener("click", () => {
   messega_error.style.display = "none";
 });
+
+//validar el rol
+let roles ;
+async function resquet(){
+  const req = await fetch('https://comparame-api.herokuapp.com/rol')
+  roles = await req.json()
+}
+resquet()
+let code_rol;
+input_rol[0].addEventListener('click', (e)=>{
+   const type_rol = e.target.value
+   campos.rol = true
+   if(type_rol == "client" ){
+     code_rol = roles.data[0].id
+   }
+  }) 
+input_rol[1].addEventListener('click',(e)=>{
+  const type_rol = e.target.value
+  campos.rol = true
+  if(type_rol == "admin"){
+    code_rol = roles.data[1].id
+  }
+})
 form.addEventListener("submit", (e) => {
   if (
     campos.name &&
     campos.lastname &&
     campos.username &&
     campos.email &&
-    campos.password
+    campos.password &&
+    campos.rol
   ) {
-    fetch('https://comparame-api.herokuapp.com/'),{
+    fetch('https://comparame-api.herokuapp.com/user/register',{
       method: 'POST',
       Header:{
        'content-type' : 'application/json'
       },
-      body: {
-        "rolID": input_name.value,
-        "username": "Medi",
-        "email": "ccfranm17@gmail.com",
-        "password": "123456",
-        "first_name": "Cristian",
-        "last_name": "Medina"
-      }
-    }
+      body: JSON.stringify({
+        "rolID": code_rol,
+        "username": input_userName.value,
+        "email": input_email.value,
+        "password": input_password.value,
+        "first_name": input_name.value,
+        "last_name": input_lastName.value
+      })
+    })
+    .then(resp => resp.Json())
+    .then(data => console.log(data)
+    )
         
   } else {
     e.preventDefault();
