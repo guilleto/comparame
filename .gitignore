@@ -3,4 +3,11 @@
 /sass
 /.sass-cache
 /.vscode
+/dist
+#dist
+/main.scss
+/style-log-in.s
+*.scss
+/.scss
+/index.dev.js
 

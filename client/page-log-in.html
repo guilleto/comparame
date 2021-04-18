@@ -5,45 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style-log-in.css">
-    <link rel="stylesheet" href="assets/sass/dist/style-log-in.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <title>Iniciar Seccion</title>
+    <title>Iniciar Sesión</title>
 </head>
 <body>
     <div class="ctn-form">
-        <form action="">
-            <h1>Iniciar Sección</h1>
+        <a href="./index.html" class="icon-logo">
+            <img src="assets/img/logo-comparame.png" alt="">
+        </a>
+        <form action="" method="POST" id="form-sign">
+            <h1>Iniciar Sesión</h1>
             <label for="">Email</label>
-            <input type="email" name="" class="input email"  >
+            <input type="email" name="" class="input email" id="input_email" >
             <label for="">Contraseña</label>
             <div class="ctn-password">
                 <input type="password" name="" id="input-password" class="input password"  />
                 <i class="far fa-eye" id="icon-hidden"></i>
             </div>
-            <a href="#" class="link-password">¿Has olvidado tu contraseña?</a>
+            <div class="forget-password">
+                <a href="#" class="link-password">¿Has olvidado tu contraseña?</a>
+            </div>
             <div class="registro">
-                <h2>Inicia con </h2>
+                <h2>o inicia sesión con</h2>
                 <div class="icon-social">
                     <i class="fab fa-google"></i>
                     <i class="fab fa-facebook"></i>
                 </div>
             </div>
+            <span class="text-validar note" id="note_error">
+                Informacion no valida
+            </span>
             <div class="ctn-bottons">
-                <button type="submit" class="registrar"><a href="page-log-up.html">Registrarse</a></button>
-                <button class="ingresar">Iniciar</button>
+                <button type="button" class="registrar"><a href="page-log-up.html">Registrarse</a></button>
+                <button type="submit" class="ingresar">Iniciar</button>
             </div>
         </form>
     </div>
     <div class="ctn-img">
         <img src="assets/img/Creativity-cuate.svg"alt="">
     </div>
-    <script src="assets/js/app.js">
-    </script>
+    <script src="assets/js/validateSign_in.js"></script>
+    <script src="assets/js/app.js"> </script>
 </body>
 </html>
