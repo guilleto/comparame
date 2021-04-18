@@ -1,0 +1,245 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header-user-profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  padding: 50px;
+}
+
+.header-user-profile div img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.header-user-profile div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header-user-profile div div h3 {
+  font-size: .8em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  padding: 2px;
+  color: #000000;
+}
+
+.header-user-profile div div p {
+  font-size: .5em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  padding: 2px;
+  color: #818080;
+}
+
+.header-user-profile .private {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-user-profile .private input {
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f3ccd7;
+  font-size: .5em;
+  font-family: 'Roboto Slab', serif;
+  background-color: #FFFFFF;
+  color: #818080;
+  text-align: center;
+}
+
+.main-user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: -1;
+}
+
+.main-user-profile .father {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  padding: 5%;
+}
+
+.main-user-profile .father .ajustes {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+.main-user-profile .father .ajustes h1 {
+  width: 70%;
+  font-size: 1.7em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+}
+
+.main-user-profile .father .ajustes .menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-user-profile .father .ajustes .menu a {
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+  padding: 5px;
+  color: #000000;
+}
+
+.main-user-profile .informacion {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 50px;
+}
+
+.main-user-profile .informacion .clip {
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  z-index: -1;
+  height: 350px;
+  width: 100%;
+  background-color: #f3ccd7;
+}
+
+.main-user-profile .informacion .h2 {
+  font-family: 'Roboto Slab', serif;
+  text-align: start;
+  font-size: 2em;
+  font-weight: 800;
+  padding: 20px;
+}
+
+.main-user-profile .informacion .nombre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2% 20%;
+  position: relative;
+  bottom: 300px;
+}
+
+.main-user-profile .informacion .nombre label {
+  text-align: start;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+}
+
+.main-user-profile .informacion .nombre input {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.main-user-profile .informacion .boton {
+  position: relative;
+  bottom: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-user-profile .informacion .boton input {
+  width: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f3ccd7;
+  font-size: .5em;
+  font-family: 'Roboto Slab', serif;
+  background-color: #FFFFFF;
+  color: #818080;
+}
+
+.main-user-profile .profile {
+  width: 30%;
+}
+
+.main-user-profile .profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+}
+
+.main-user-profile .profile div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 100px;
+}
+/*# sourceMappingURL=styles.css.map */
