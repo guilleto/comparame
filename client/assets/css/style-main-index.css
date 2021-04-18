@@ -26,6 +26,7 @@
     min-width: 0;
   }
   .container-content .secciones .destok {
+    display: none;
     width: 100%;
   }
   .container-content .secciones .destok .range-price {
@@ -122,4 +123,7 @@
   .footer .social-media .icons {
     margin-left: 10px;
   }
+
 }
+
+/*# sourceMappingURL=style-main-index.css.map *
