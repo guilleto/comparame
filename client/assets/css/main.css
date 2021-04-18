@@ -31,10 +31,7 @@ body {
   width: 100%;
   max-width: 375px;
 }
-.icon-logo img{
-  margin-top: 2rem;
-  height: 50px;
-}
+
 form {
   width: 100%;
   height: 100%;
@@ -45,12 +42,7 @@ label, h1, h2, button, .input, a {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-.ctn-rol h2{
-  font-weight: 500;
-}
-.ctn-rol label{
-  font-weight: 300;
-}
+
 a:hover {
   color: gray;
 }
@@ -159,7 +151,10 @@ label, .input {
 }
 
 .registro {
- display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .fab {
@@ -178,12 +173,12 @@ label, .input {
   align-items: center;
 }
 
-.ctn {
+.ctn-password {
   position: relative;
   width: auto;
   height: auto;
 }
- i {
+.ctn-password i {
   position: absolute;
   margin: auto;
   top: 22px;
@@ -206,9 +201,6 @@ h1 {
 .registro {
   margin-top: 1rem;
   margin-bottom: 3rem;
-}
-.note{
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -234,7 +226,7 @@ h1 {
     width: 80%;
   }
 
-  label, .input,h2 {
+  label, .input {
     margin-left: 2rem;
   }
 
@@ -269,7 +261,7 @@ h1 {
     font-size: 35px;
   }
 
-   i {
+  .ctn-password i {
     right: 5rem;
   }
 }

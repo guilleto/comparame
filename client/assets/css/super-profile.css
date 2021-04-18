@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.header .logo-box .logo {
+  height: 25px;
+}
+.header .user-small .profile-icon-small {
+  height: 25px;
+}
+.header .user-small .full-bell {
+  display: none;
+}
+.header .user-small .bell:hover ~ .full-bell {
+  display: inline;
+}
+
+/*# sourceMappingURL=super-profile.css.map */
