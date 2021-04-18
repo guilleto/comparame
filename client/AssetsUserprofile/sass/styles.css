@@ -71,16 +71,16 @@ a {
   color: #818080;
 }
 
-.header-user-profile div {
+.header-user-profile .private {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.header-user-profile div input {
+.header-user-profile .private input {
   width: 20%;
   padding: 10px;
   border-radius: 10px;
@@ -206,9 +206,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-user-profile .informacion .boton input {

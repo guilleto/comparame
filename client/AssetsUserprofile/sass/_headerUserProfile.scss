@@ -34,9 +34,9 @@
             }
         }
     }
-    div{
+    .private{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         input{
             width: 20%;
             padding: 10px;
