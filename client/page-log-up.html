@@ -17,7 +17,7 @@
 
 <body>
     <div class="ctn-form">
-        <a href="#" class="icon-logo">
+        <a href="./index.html" class="icon-logo">
             <img src="assets/img/logo-comparame.png" alt="">
         </a>
         <form action="" method="post" id="form" >
@@ -42,7 +42,6 @@
                 <span class="note nt-check-user" id="check_user">
                     El nombre de usuario ya existe
                 </span>
-                
             </div>
             <label for="">Email</label>
             <div id="ctn-email" class="ctn">
@@ -57,11 +56,14 @@
                     La contraseña  debe ser mayor a cuatro
                 </span>
             </div>
-            <div class="rol">
-                <label for="mall"></label>
-                <input type="radio" name="rol" id="mall">
-                <label for="client"></label>
-                <input type="radio" name="rol" id="client">
+            <div class="ctn-rol">
+                <h2>Que tipo de usuario desea ser</h2>
+                <div class="rol">
+                    <label for="mall">Cliente</label>
+                    <input type="radio" name="rol" value="client" id="mall" class="slt-rol">
+                    <label for="client">Administrar</label>
+                    <input type="radio" name="rol" id="client" value="admin" class="slt-rol">
+                </div>
             </div>
             <div class="registro">
                 <h2>O registrate con </h2>
@@ -71,7 +73,7 @@
                 </div>
             </div>
             <div class="ctn-terminos">
-                <input type="checkbox" name="" class="input check" />
+                <input type="checkbox" name="" id="input-terminos" class="input check" />
                 <label for="" class="label-check">Termino y condiciones</label>
             </div>
             <span class="text-validar note" id="message_error">
@@ -89,5 +91,5 @@
 </body>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/validarForm.js"></script>
-
+<script src="assets/js/url.js"></script>
 </html>
