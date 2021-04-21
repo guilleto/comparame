@@ -1,0 +1,129 @@
+@media (min-width: 800px) {
+  .search .filtrer {
+    display: none;
+  }
+
+  .container-content {
+    display: flex;
+  }
+  .container-content .container-offert {
+    width: 40%;
+  }
+  .container-content .tiendas {
+    width: 30%;
+  }
+  .container-content .secciones {
+    order: -1;
+    width: 25%;
+  }
+  .container-content .secciones .cont-secciones {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-content .secciones .cont-secciones .section {
+    width: 90px;
+    min-width: 0;
+  }
+  .container-content .secciones .destok {
+    display: none;
+    width: 100%;
+  }
+  .container-content .secciones .destok .range-price {
+    margin: 20px 0 20px 0;
+  }
+  .container-content .secciones .destok .range-price input[type=range], .container-content .secciones .destok .range-price input[type=range]::-webkit-slider-runnable-track, .container-content .secciones .destok .range-price input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  .container-content .secciones .destok .range-price input[type=range] {
+    width: 70%;
+  }
+  .container-content .secciones .destok .range-price input[type=range]:focus {
+    outline: none;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-webkit-slider-thumb {
+    background-color: #777;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-top: -9px;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-moz-range-thumb {
+    background-color: #777;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-ms-thumb {
+    background-color: #777;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-webkit-slider-runnable-track {
+    background-color: #777;
+    height: 3px;
+  }
+  .container-content .secciones .destok .range-price input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-moz-range-track {
+    background-color: #777;
+    height: 3px;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-ms-track {
+    background-color: #777;
+    height: 3px;
+  }
+  .container-content .secciones .destok .range-price input[type=range]::-ms-fill-lower {
+    background-color: HotPink;
+  }
+  .container-content .secciones .destok .range-price span {
+    margin: 0 5px 0 5px;
+  }
+  .container-content .secciones .destok .price-total {
+    margin-top: 1rem;
+  }
+  .container-content .secciones .destok h2 {
+    margin-top: 30px;
+  }
+  .container-content .secciones .destok .star {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .container-content .secciones .destok .star div {
+    height: 35px;
+    background: #e4e0e0;
+    width: 35%;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .container-content .secciones .destok .star div:nth-child(2) {
+    width: 30%;
+  }
+  .container-content .tiendas {
+    order: -1;
+  }
+  .container-content .tiendas .mapa {
+    height: 90%;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer .social-media {
+    display: flex;
+    align-items: center;
+  }
+  .footer .social-media .icons {
+    margin-left: 10px;
+  }
+
+}
+
+/*# sourceMappingURL=style-main-index.css.map *
