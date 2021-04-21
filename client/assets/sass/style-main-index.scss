@@ -1,0 +1,150 @@
+@media (min-width: 800px) {
+    .search {
+        .filtrer {
+            display: none;
+        }
+    }
+
+    .container-content {
+        display: flex;
+
+        //  grid-template-columns: 33%;
+        //  grid-template-rows: 100%;
+        .container-offert{
+            width:40%
+        }
+        .tiendas {
+            width: 30%;
+        }
+
+        .secciones {
+            order: -1;
+            width: 25%;
+            .cont-secciones {
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+
+                .section {
+                    width: 90px;
+                    min-width: 0;
+                }
+            }
+
+            .destok {
+                display: inline-block;
+                width:100%;
+                .range-price {
+                    margin:20px 0 20px 0;
+                    & input[type=range],
+                    & input[type=range]::-webkit-slider-runnable-track,
+                    & input[type=range]::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                    }
+
+                    & input[type=range] {
+                        width: 70%;
+                    }
+
+                    & input[type=range]:focus {
+                        outline: none;
+                    }
+
+                    & input[type=range]::-webkit-slider-thumb {
+                        background-color: #777;
+                        width: 20px;
+                        height: 20px;
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                        margin-top: -9px;
+                    }
+
+                    & input[type=range]::-moz-range-thumb {
+                        background-color: #777;
+                        width: 15px;
+                        height: 15px;
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                    }
+
+                    & input[type=range]::-ms-thumb {
+                        background-color: #777;
+                        width: 20px;
+                        height: 20px;
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                    }
+
+                    & input[type=range]::-webkit-slider-runnable-track {
+                        background-color: #777;
+                        height: 3px;
+                    }
+
+                    & input[type=range]:focus::-webkit-slider-runnable-track {
+                        outline: none;
+                    }
+
+                    & input[type=range]::-moz-range-track {
+                        background-color: #777;
+                        height: 3px;
+                    }
+
+                    & input[type=range]::-ms-track {
+                        background-color: #777;
+                        height: 3px;
+                    }
+
+                    & input[type=range]::-ms-fill-lower {
+                        background-color: HotPink;
+                    }
+
+                    & span {
+                        margin: 0 5px 0 5px;
+                    }
+                }
+
+                .price-total {
+                    margin-top: 1rem;
+                }
+                h2{
+                    margin-top: 30px;
+                }
+                .star {
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                   
+                    div {
+                        height: 35px;
+                        background: #e4e0e0;
+                        width: 35%;
+                        margin: 10px;
+                        border-radius: 5px;
+                    }
+
+                    div:nth-child(2) {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        .tiendas {
+            order: -1;
+            .mapa{
+                height: 90%;
+            }
+        }
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-around;
+        .social-media{
+            display: flex;
+            align-items: center;
+            .icons{
+                margin-left: 10px;
+            }
+        }
+    }
+}
