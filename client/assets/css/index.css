@@ -497,5 +497,8 @@ h2, span {
 .destok {
   display: none;
 }
-
+#mapid{
+  height: 100%;
+  width:100%;
+}
 /*# sourceMappingURL=index.css.map */

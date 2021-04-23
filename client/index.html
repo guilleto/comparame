@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="assets/css/style-main-index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <title>Inicio</title>
 </head>
 
@@ -341,7 +343,11 @@
         </section>
         <section class="tiendas">
             <div class="text">Consulte las tiendas más cercanas</div>
-            <div class="mapa"></div>
+            <div class="mapa">
+                <div id="mapid">
+
+                </div>
+            </div>
         </section>
     </section>
     <footer class="footer">
@@ -363,6 +369,7 @@
         <div class="rights">© Comparame 2021 All Rights Reserved.</div>
     </footer>
     <script src="assets/js/validar-user-log.js"></script>
+    <script src="assets/js/api-leaflet.js"></script>
 </body>
 
 </html>
