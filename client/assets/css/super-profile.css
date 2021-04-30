@@ -5,6 +5,7 @@
 }
 
 .header {
+  background-color: rgba(0, 255, 0, 0.37);
   height: 50px;
   display: flex;
   justify-content: space-around;
@@ -23,14 +24,45 @@
   color: red;
 }
 
-.info {
-  width: 250px;
+.flex-info {
+  display: flex;
+}
+.flex-info .info {
+  padding: 35px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 55%;
 }
-.info .profile-icon {
-  width: 150px;
+.flex-info .info .profile-icon {
+  width: 250px;
+}
+.flex-info .info .info-box {
+  width: 300px;
+}
+.flex-info .more-info #statistics:checked ~ .catalog-box,
+.flex-info .more-info #statistics:checked ~ .map-box,
+.flex-info .more-info #statistics:checked ~ .about-us-box {
+  display: none;
+}
+.flex-info .more-info #catalog:checked ~ .statistics-box,
+.flex-info .more-info #catalog:checked ~ .map-box,
+.flex-info .more-info #catalog:checked ~ .about-us-box {
+  display: none;
+}
+.flex-info .more-info #map:checked ~ .statistics-box,
+.flex-info .more-info #map:checked ~ .catalog-box,
+.flex-info .more-info #map:checked ~ .about-us-box {
+  display: none;
+}
+.flex-info .more-info #about-us:checked ~ .statistics-box,
+.flex-info .more-info #about-us:checked ~ .map-box,
+.flex-info .more-info #about-us:checked ~ .catalog-box {
+  display: none;
+}
+
+footer {
+  background-color: rgba(255, 0, 0, 0.37);
 }
 
 /*# sourceMappingURL=super-profile.css.map */
