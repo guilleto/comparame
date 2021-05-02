@@ -245,8 +245,8 @@ a {
 
 .main-user-profile .profile div button {
   position: absolute;
-  top: 65%;
-  right: 8%;
+  top: 70%;
+  right: 4%;
   width: 50px;
   padding: 10px;
   border-radius: 10px;
@@ -255,5 +255,13 @@ a {
   font-family: 'Roboto Slab', serif;
   background-color: #FFFFFF;
   color: #818080;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-user-profile .profile div button {
+    position: absolute;
+    top: 70%;
+    right: 15%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

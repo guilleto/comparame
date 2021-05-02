@@ -10,4 +10,7 @@
 *.scss
 /.scss
 /index.dev.js
-
+#variables
+.env
+#modulos
+/node_modules
