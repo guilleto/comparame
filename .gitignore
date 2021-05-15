@@ -2,3 +2,6 @@
 .vscode
 dist
 .map
+/server
+#server
+/.gitignore
