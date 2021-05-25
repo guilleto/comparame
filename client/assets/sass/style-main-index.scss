@@ -7,19 +7,33 @@
 
     .container-content {
         display: flex;
+        flex-wrap: wrap;
 
         //  grid-template-columns: 33%;
         //  grid-template-rows: 100%;
         .container-offert{
-            width:40%
+            width:45%;
+            
+            .ofertas{
+                .title{
+                    .text{
+                        font-size: 25px;
+                    }
+                }
+            }
         }
         .tiendas {
-            width: 30%;
+            width: 50%;
+            padding: 0 20px;
+
+            .text{
+                font-size: 20px;
+            }
         }
 
         .secciones {
             order: -1;
-            width: 25%;
+            width: 100%;
             .cont-secciones {
                 overflow: hidden;
                 display: flex;
@@ -32,7 +46,7 @@
             }
 
             .destok {
-                display: inline-block;
+                // display: inline-block;
                 width:100%;
                 .range-price {
                     margin:20px 0 20px 0;
