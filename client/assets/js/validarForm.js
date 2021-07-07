@@ -11,8 +11,7 @@ var campos = {
   name: false,
   lastname: false,
   email: false,
-  password: false,
-  rol:false
+  password: false
 };
 //inicializar variables
 const form = document.getElementById("form");
@@ -20,15 +19,15 @@ const input_name = document.getElementById("input_name");
 const input_lastName = document.getElementById("input_lastName");
 const input_userName = document.getElementById("input_userName");
 const input_email = document.getElementById("input_email");
-const input_terminos = document.getElementById('input-terminos')
-const input_rol = document.querySelectorAll('.slt-rol')
-const ctn_response_false = document.getElementById('ctn-response-false')
-const ctn_response_true = document.getElementById('ctn-response-true')
+const input_terminos = document.getElementById('input-terminos');
+// const input_rol = document.querySelectorAll('.slt-rol');
+const ctn_response_false = document.getElementById('ctn-response-false');
+const ctn_response_true = document.getElementById('ctn-response-true');
 //funcion para resalizar peticiones a la base datos
 async function resquet_BD(url) {
   const resp = await fetch(url);
   const res = await resp.json();
-  return res
+  return res;
 }
 //functinon que me permite mostrar si esta correcto
 function show_right(input, icon) {
@@ -162,23 +161,30 @@ form.addEventListener("click", () => {
 });
 
 //validar el rol
-let roles ;
+let code_rol;
 async function resquet(){
-  const req = await fetch('https://comparame-api.herokuapp.com/rol')
-  roles = await req.json()
+  const req = await fetch('https://comparame-api.herokuapp.com/rol');
+  roles = await req.json();
+  code_rol = roles.data[1]._id;
 }
 resquet()
-let code_rol;
-input_rol[0].addEventListener('click', ()=>{
-  //  const type_rol = e.target.value
-   campos.rol = true
-     code_rol = roles.data[0]._id
-  }) 
-input_rol[1].addEventListener('click',()=>{
-  // const type_rol = e.target.value
-  campos.rol = true
-    code_rol = roles.data[1]._id
-})
+// input_rol[0].addEventListener('click', ()=>{
+//   //  const type_rol = e.target.value
+//    campos.rol = true;
+//      code_rol = roles.data[0]._id;
+//   }) 
+// input_rol[1].addEventListener('click',()=>{
+//   // const type_rol = e.target.value
+//   campos.rol = true;
+//     code_rol = roles.data[1]._id;
+// });
+
+
+
+
+
+
+
 form.addEventListener("submit", (e) => {
   e.preventDefault()
   if (
@@ -186,8 +192,7 @@ form.addEventListener("submit", (e) => {
     campos.lastname &&
     campos.username &&
     campos.email &&
-    campos.password &&
-    campos.rol
+    campos.password
   ) {
     fetch('https://comparame-api.herokuapp.com/user/register',{
       method: 'POST',
@@ -208,18 +213,39 @@ form.addEventListener("submit", (e) => {
       const response = data;
       console.log(data)
       if(response.status == false ){
-        ctn_response_false.innerHTML = response.message
-        ctn_response_false.style.display = "inline-block"
+        ctn_response_false.innerHTML = response.message;
+        ctn_response_false.style.display = "inline-block";
       }
       if(response.status == true){
-        ctn_response_true.innerHTML = response.message
-        ctn_response_true.style.display = "inline-block"
-      }
-      // let
-      // if(data){
+        ctn_response_true.innerHTML = response.message;
+        ctn_response_true.style.display = "inline-block";
+        // let message = window.confirm('¿Desea crear un supermercado? "pulsa Aceptar"  O ¿continuar como usuario normal ? "pulsa Cancelar"');
+        // if(message){
+        //   window.location.replace('./change-rol.html')
+        // }else{
+        //   window.location.replace('./page-log-in.html')
+        // }
+        Swal.fire({
+          icon:'question',
+          title: 'Deseas crear un supermercado?',
+          text:'Crea tu propio super en nuestra pagina o continua normal',
+          showDenyButton: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.replace('./change-rol.html')
+          } else if (result.isDenied) {
+            window.location.replace('./page-log-in.html')
+          }
+        })
 
-      // }
+      }
+    
       }).catch((err)=>{
+        Swal.fire({
+          icon:'error',
+          title:'Error',
+          text:'intente nuevamente'
+        })
       console.log('error en el registro '+ err)
     })
   } else {

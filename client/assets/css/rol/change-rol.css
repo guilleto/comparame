@@ -1,0 +1,74 @@
+nav {
+  padding: 5px 20px 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 13px -1px 7px #000;
+          box-shadow: 13px -1px 7px #000;
+}
+
+nav .logo-comparame {
+  height: 50px;
+}
+
+nav .menu-link-pages {
+  display: felx;
+}
+
+nav .menu-link-pages a {
+  color: #000000;
+  margin-right: 2rem;
+}
+
+nav .menu-link-pages img {
+  width: 30px;
+}
+
+nav .menu-link-pages button:active {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.note-error-hard {
+  margin: 20px;
+  width: 250px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: red;
+  color: #fff;
+}
+
+.succes-hard {
+  margin: 2px;
+  width: 250px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid green;
+  font-weight: bold;
+}
+
+.change-rol {
+  display: none;
+}
+
+.form-login {
+  width: 320px;
+  height: 320px;
+  padding: 2rem;
+  -webkit-box-shadow: 1px 2px 5px #7c7a7a;
+          box-shadow: 1px 2px 5px #7c7a7a;
+}
+/*# sourceMappingURL=change-rol.css.map */

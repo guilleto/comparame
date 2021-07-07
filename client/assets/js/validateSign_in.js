@@ -52,11 +52,16 @@ form_sign.addEventListener("submit",(e)=>{
         if(response.status == true){
             let token = response.token
             localStorage.setItem('key-user',token)
+            localStorage.setItem('datos-log',JSON.stringify(response))
             window.location.replace('./index.html')
         }
         if(response.status== false){
             note_error.style.display = "inline-block"
         }
+    }).catch(err=>{
+      note_error.style.display = "inline-block"
+      note_error.innerHTML = "Error... Intente mas tarde"
+      note_error.style.marginTop="2rem"
     })
  }else{
      note_error.style.display = "inline-block"

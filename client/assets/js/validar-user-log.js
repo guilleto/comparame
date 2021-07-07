@@ -28,10 +28,15 @@ setTimeout(()=>{
     },4000)
 let coords_latitude;
 let coords_longitude;
+
 if('geolocation'in navigator){
     navigator.geolocation.getCurrentPosition((position)=>{
         coords_latitude = position.coords.latitude
         coords_longitude = position.coords.longitude
+        localStorage.setItem('coordenadas',JSON.stringify(
+            { latitude: position.coords.latitude,
+            longitude:position.coords.latitude}
+        ))
     })
 }
 const update_location = async(lon,lat,token)=>{
