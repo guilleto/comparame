@@ -216,7 +216,7 @@ form.addEventListener("submit", (e) => {
         ctn_response_false.innerHTML = response.message;
         ctn_response_false.style.display = "inline-block";
       }
-      if(response.status == true){
+      if(response.status){
         ctn_response_true.innerHTML = response.message;
         ctn_response_true.style.display = "inline-block";
         // let message = window.confirm('¿Desea crear un supermercado? "pulsa Aceptar"  O ¿continuar como usuario normal ? "pulsa Cancelar"');

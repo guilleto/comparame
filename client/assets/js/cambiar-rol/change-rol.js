@@ -73,7 +73,7 @@ form_change_rol.addEventListener('submit', (e) => {
           Swal.fire({
               icon: 'success',
               title: 'Operacion exitosa',
-              text: 'Comienza a subir tus productos y compartirlos'
+              text: 'Crea tu punto fisico'
           })
         window.location.replace('./page-supermarkert.html')
       }else{

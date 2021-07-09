@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/Swalert/sweetalert2.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
@@ -36,10 +37,10 @@
                 <a class="con-item" href="./page-log-up.html">Registrarse</a>
             </div>
             <div class="menuLogin" id="menu-user">
-                <a class="con-item" href="#">Mi cuenta</a>
+                <a class="con-item" href="./page-user-profile.html">Mi cuenta</a>
                 <a class="con-item" href="./favoritos.html">Favoritos</a>
                 <a class="con-item" href="./miLista.html">Mi lista</a>
-                <a class="con-item" href="#">Cerrar sesión</a>
+                <a class="con-item" href="#" id="close-seccion">Cerrar sesión</a>
             </div>
         </div>
     </header>
@@ -113,7 +114,7 @@
                     <p class="text">Productos populares</p>
                     <p class="more">View all</p>
                 </div>
-                <div class="content-card">
+                <div class="content-card" id="content-cards">
                     <div class="popular-card">
                         <img class="img" src="./assets/img/huevos.jpg" alt="">
                         <div class="info">
@@ -369,7 +370,11 @@
         <div class="rights">© Comparame 2021 All Rights Reserved.</div>
     </footer>
     <script src="assets/js/validar-user-log.js"></script>
+    <script src="assets/Swalert/sweetalert2.all.min.js"></script>
     <script src="assets/js/api-leaflet.js"></script>
+    <script src="assets/js/close-section.js"></script>
+    <script src="assets/js/home/home.js"></script>
+    <script src="assets/js/favoritos/favoritos.js"></script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="assets/Swalert/sweetalert2.min.css">
     <link rel="stylesheet" href="./assets/css/favoritos.css">
     <link rel="stylesheet" href="assets/css/style-main-index.css">
     <link rel="stylesheet" href="assets/css/style-loader.css">
@@ -34,7 +35,7 @@
                 <a class="con-item" href="#">Mi cuenta</a>
                 <a class="con-item" href="./favoritos.html">Favoritos</a>
                 <a class="con-item" href="./miLista.html">Mi lista</a>
-                <a class="con-item" href="#">Cerrar sesión</a>
+                <a class="con-item" href="#" id="close-seccion">Cerrar sesión</a>
             </div>
         </div>
     </header>
@@ -43,7 +44,7 @@
             <div class="title">
                 <p class="text">MIS FAVORITOS</p>
             </div>
-            <div class="content-card">
+            <div class="content-card" id="ctn-favorite-card">
                 <div class="favoritos-card">
                     <img class="img" src="./assets/img/huevos.jpg" alt="">
                     <div class="info">
@@ -80,7 +81,7 @@
                         <i class="fas fa-plus"></i>
                     </div> 
                 </div>
-                <div class="favoritos-card">
+                <div class="favoritos-card" >
                     <img class="img" src="./assets/img/huevos.jpg" alt="">
                     <div class="info">
                         <p class="name">Gaseosa</p>
@@ -173,7 +174,11 @@
             <div class="ctn-loader" id="ctn-loader">
                 <div class="loader"></div>
             </div>
+            <script src="assets/Swalert/sweetalert2.all.min.js"></script>
             <script src="assets/js/protected.js"></script>
+            <script src="assets/js/close-section.js"></script>
+            <script src="assets/js/favoritos/getFavoritos.js"></script>
+            <script src="assets/js/favoritos/deleteFavoritos.js"></script>
         </footer>
     </body>
     

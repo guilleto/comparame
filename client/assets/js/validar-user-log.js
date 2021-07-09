@@ -1,7 +1,7 @@
 const user_token = localStorage.getItem('key-user');
 const menu_log = document.getElementById('menu-log');
-const menu_user = document.getElementById('menu-user')
-let response_resquest_autenticate
+const menu_user = document.getElementById('menu-user');
+
 const autentication_token = (tok)=>{
     fetch('https://comparame-api.herokuapp.com/user/authenticate',{
         method:'GET',
@@ -11,21 +11,55 @@ const autentication_token = (tok)=>{
     })
     .then(res => res.json())
     .then((resp)=>{
-         response_resquest_autenticate = resp
-    })
-};
-autentication_token(user_token)
-//esparar a tener la respuesta si el toques es valido 
-//proceder
-setTimeout(()=>{
-    if(typeof(user_token)=="string"){
-        if(response_resquest_autenticate.status){
+        console.log(resp)
+        console.log(resp.status)
+        if(resp.status){
+            localStorage.setItem('validation',resp.status)
             menu_user.style.display = "flex"
             menu_log.style.display = "none"
-            update_location(coords_longitude,coords_latitude,user_token)
+            setTimeout(()=>{
+                update_location(coords_longitude,coords_latitude,user_token)
+            },5000)
         }
-    }   
-    },4000)
+        if(!resp.status){
+            Swal.fire({
+                icon:'error',
+                title:'Tu token a expirado ',
+                text:'vuelve a iniciar seccion para  poder continuar continuar  '
+            })
+        }
+    })
+};
+
+//esparar a tener la respuesta si el toques es valido 
+//proceder
+
+( async ()=>{
+    if(user_token!=null){
+        autentication_token(user_token)
+        //veificar que el usuario sea del rol admin super market
+
+        const datos_user = JSON.parse(localStorage.getItem('datos-log'))
+        const req = await fetch('https://comparame-api.herokuapp.com/rol');
+        roles = await req.json();
+        code_rol = roles.data[0]._id;
+        if(code_rol == datos_user.user.rol){
+            console.log("es un usuario con permiso de supermercado");
+            let dashboard = document.createElement('a');
+            dashboard.href = './page-supermarkert.html';
+            dashboard.className = 'con-item';
+            dashboard.textContent = 'Dashboard' 
+            menu_user.appendChild(dashboard);
+
+            menu_user.removeChild( menu_user.children[1]);
+            menu_user.removeChild( menu_user.children[1]);
+        }
+
+    }
+})()
+
+
+
 let coords_latitude;
 let coords_longitude;
 
@@ -53,3 +87,8 @@ const update_location = async(lon,lat,token)=>{
     const respuesta = await resp.json()
     return respuesta
 }
+
+// validar seccion 
+
+
+

@@ -8,6 +8,7 @@ const loader = document.getElementById('ctn-loader');
             }
         })
         const response = await res.json()
+        console.log(response)
         respuesta_api = response
     }
     authentication_token()

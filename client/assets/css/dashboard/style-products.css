@@ -1,0 +1,18 @@
+.owen-product {
+  max-width: 180px;
+  margin: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 1px 0px 3px -1px #000;
+          box-shadow: 1px 0px 3px -1px #000;
+}
+
+.owen-product .img-product {
+  width: 180px;
+  height: auto;
+}
+
+.owen-product .name-product, .owen-product .price-product, .owen-product .discount-product {
+  margin-left: 10px;
+  font-weight: normal;
+}
+/*# sourceMappingURL=style-products.css.map */

@@ -57,3 +57,53 @@ link_update.addEventListener('click',()=>{
         }
     })
 })
+
+
+//definir varibles
+const ctn_list_product = document.getElementById('list-product')
+
+
+//renderizar los productos con los que el cliente cuenta
+const data_market = JSON.parse(localStorage.getItem('datos-market'));
+fetch(`https://comparame-api.herokuapp.com/supermarket/products/${data_market._id}`)
+  .then(response => response.json())
+  .then(result =>{ 
+    //   console.log(result.products)
+      if(result.status){
+          template_product(result.products,ctn_list_product)
+      }
+
+    }).catch(error => console.log('error', error));
+
+
+//template para imprimir productos
+
+const template_product = (array,destino)=>{
+  array.forEach((element)=>{
+      console.log(element)
+      let container = document.createElement('div');
+        container.className = "owen-product"
+
+      let img = document.createElement('img');
+        img.src = "assets/img/noFound.png";
+        img.className = "img-product";
+
+      let name = document.createElement('h3');
+      name.textContent = element.product_name;
+      name.className = "name-product m-b";
+      let price = document.createElement('h3');
+      price.textContent = "$ "+element.product_price; 
+      price.className = "price-product m-b";
+
+      let discount = document.createElement('h4');
+      discount.textContent = element.product_discount +" %"
+      discount.className = "discount-product m-b"
+      
+
+      container.appendChild(img);
+      container.appendChild(name);
+      container.appendChild(price);
+      container.appendChild(discount);
+      destino.appendChild(container);
+  })
+}
