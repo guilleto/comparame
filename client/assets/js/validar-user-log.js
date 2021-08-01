@@ -11,8 +11,8 @@ const autentication_token = (tok)=>{
     })
     .then(res => res.json())
     .then((resp)=>{
-        console.log(resp)
-        console.log(resp.status)
+        // console.log(resp)
+        // console.log(resp.status)
         if(resp.status){
             localStorage.setItem('validation',resp.status)
             menu_user.style.display = "flex"
@@ -50,7 +50,7 @@ const autentication_token = (tok)=>{
             dashboard.className = 'con-item';
             dashboard.textContent = 'Dashboard' 
             menu_user.appendChild(dashboard);
-
+            resquest_market(datos_user.user._id)
             menu_user.removeChild( menu_user.children[1]);
             menu_user.removeChild( menu_user.children[1]);
         }
@@ -69,7 +69,7 @@ if('geolocation'in navigator){
         coords_longitude = position.coords.longitude
         localStorage.setItem('coordenadas',JSON.stringify(
             { latitude: position.coords.latitude,
-            longitude:position.coords.latitude}
+            longitude:position.coords.longitude}
         ))
     })
 }
@@ -89,6 +89,39 @@ const update_location = async(lon,lat,token)=>{
 }
 
 // validar seccion 
+//traer el super con el que el usuario esta administrando
 
+const resquest_market = (idUser)=>{
+    //--------------------------llamar datos 
+    fetch("https://comparame-api.herokuapp.com/supermarket/",{
+        method:'GET'
+    })
+    .then(response => response.json())
+    .then(result =>{ 
+        // console.log(result)
+        if(result.status){
+            let supermarkets = result.data.supermarkets.filter((e)=>{
+                      if( e.userID == idUser){
+                          return  e
+                      }
+                    })
+                localStorage.setItem('datos-market',JSON.stringify(supermarkets[0]));
+            }
+            if(!result.status){
+                Swal.fire({
+                    icon:'error',
+                    title:'Error'
+                })
+
+            }
+        })
+        .catch(error =>{ 
+            console.log('error', error)
+            Swal.fire({
+                icon:'error',
+                title:'Error'
+            })
+        });
+}
 
 

@@ -7,15 +7,15 @@
     display: flex;
   }
   .container-content .container-offert {
-    width: 40%;
+    width: 60%;
   }
   .container-content .tiendas {
-    width: 30%;
+    width: 40%;
   }
-  .container-content .secciones {
+  /* .container-content .secciones {
     order: -1;
     width: 25%;
-  }
+  } */
   .container-content .secciones .cont-secciones {
     overflow: hidden;
     display: flex;

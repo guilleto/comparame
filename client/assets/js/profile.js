@@ -118,6 +118,7 @@ const setProfileData = (data) => {
   if(getSupermarketTrigger) {
       if(user.rol.rolName == "supermarket") {
         getSupermarketTrigger.style.display = "block"
+        document.getElementById('btn-create-pyshical-point').style.display="inline-block"
       }
   }
 
@@ -157,3 +158,5 @@ const handleProfileUpdate = () => {
   handleProfileUpdate();
   setProfileData(userData);
 })();
+
+

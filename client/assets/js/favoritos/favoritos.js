@@ -27,7 +27,7 @@ const add_Favoritos = (id,token)=>{
     .catch(error => console.log('error', error));
 }
 
-
+let userToken = localStorage.getItem('key-user')
 let token = localStorage.getItem('validation')
 ctn_card_feautered.addEventListener('click',(e)=>{
     // console.log(e.target.className)
@@ -37,7 +37,7 @@ ctn_card_feautered.addEventListener('click',(e)=>{
       
             // console.log(e.target)
             let _id = e.target.parentNode.id
-           add_Favoritos(_id,user_token)
+           add_Favoritos(_id,userToken)
             
         }
         if(user_token , token==null){

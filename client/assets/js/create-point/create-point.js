@@ -48,7 +48,7 @@ form_point.addEventListener('submit',(e)=>{
       redirect: 'follow'
     };
     fetch("https://comparame-api.herokuapp.com/supermarket/headsquare", requestOptions)
-      .then(response => response.text())
+      .then(response => response.json())
       .then(result =>{
        console.log(result);
         note_create_point.textContent = "Operacion exitosa!!";
