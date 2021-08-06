@@ -2,6 +2,13 @@
   .search .filtrer {
     display: none;
   }
+  .search {
+    justify-content: left;
+  }
+
+  .search .dropdown {
+    margin: 20px;
+  }
 
   .container-content {
     display: flex;
@@ -16,15 +23,7 @@
     order: -1;
     width: 25%;
   } */
-  .container-content .secciones .cont-secciones {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container-content .secciones .cont-secciones .section {
-    width: 90px;
-    min-width: 0;
-  }
+  
   .container-content .secciones .destok {
     display: none;
     width: 100%;
@@ -110,6 +109,10 @@
   }
   .container-content .tiendas .mapa {
     height: 90%;
+  }
+
+  .popular {
+    margin: 20px;
   }
 
   .footer {
