@@ -207,7 +207,6 @@ h2, span {
   width: 100%;
 }
 .popular .content-card .popular-card {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -500,5 +499,12 @@ h2, span {
 #mapid{
   height: 100%;
   width:100%;
+}
+
+.ctn-action{
+  display: flex; 
+}
+.ctn-action div{
+  margin-right: 10px;
 }
 /*# sourceMappingURL=index.css.map */

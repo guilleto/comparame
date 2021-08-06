@@ -13,7 +13,7 @@ const template_product = (array,destino)=>{
         info.className= "info";
 
         let name = document.createElement('p');
-        name.textContent = element.product_name;
+        name.textContent = recortar_text(element.product_name);
         name.className = "name";
 
         let ubicacion = document.createElement('div');
@@ -31,9 +31,9 @@ const template_product = (array,destino)=>{
 
         let precio = document.createElement('p');
         precio.className = "precio";
-        precio.textContent = element.product_price;
+        precio.textContent = "$ "+element.product_price;
 
-        info.appendChild(name);
+       info.appendChild(name);
         info.appendChild(ubicacion);
         info.appendChild(precio);
 
@@ -60,10 +60,18 @@ const template_product = (array,destino)=>{
         add.appendChild(plus);
         
         card_product.appendChild(img);
+        // /card_product.appendChild(name);
         card_product.appendChild(info);
-        card_product.appendChild(favorito);
-        card_product.appendChild(add);
 
+
+        let ctn_action = document.createElement('div');
+        ctn_action.className = "ctn-action" ;
+        ctn_action.appendChild(favorito);
+        ctn_action.appendChild(add);
+
+        // card_product.appendChild(favorito);
+        // card_product.appendChild(add);
+        card_product.appendChild(ctn_action);
         destino.appendChild(card_product)
         
     })
@@ -85,4 +93,14 @@ window.onload = ()=>{
 
 
         }).catch(error => console.log('error', error));
+}
+
+
+
+const recortar_text = (text)=>{
+    if(text.length >19){
+        return text.slice(0,19)
+    }else{
+        return text
+    }
 }
