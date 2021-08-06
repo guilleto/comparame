@@ -18,7 +18,7 @@ h2, span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 60px;
   padding: 20px;
 }
 .header .logo {
@@ -58,7 +58,7 @@ h2, span {
 }
 .header .menu-container .menuSinLogin, .header .menu-container .menuLogin {
   position: absolute;
-  top: 90px;
+  top: 80px;
   left: 0;
   background: rgba(255, 79, 90, 0.9);
   width: 100%;
@@ -79,6 +79,8 @@ h2, span {
 
 .search {
   display: flex;
+  flex-wrap: wrap;
+  height: 100px;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
@@ -91,6 +93,7 @@ h2, span {
   width: 100%;
   border-radius: 15px;
 }
+
 .search .div-search .fas {
   color: #ff4f5a;
   margin-left: 15px;
@@ -129,12 +132,23 @@ h2, span {
   color: #fff;
 }
 
-.secciones {
-  margin: 20px;
+.search .btn {
+  font-size: 14px;
 }
+
+.dropdown, .dropend, .dropstart, .dropup {
+  position: initial;
+}
+
+.search .categorias {
+  margin-right: -15px;
+}
+
+.offcanvas-body {
+  padding: 0rem 1rem;
+}
+
 .secciones .cont-secciones {
-  display: flex;
-  overflow: scroll;
   scroll-behavior: smooth;
   width: 100%;
 }
@@ -171,18 +185,19 @@ h2, span {
   color: gray;
   text-align: center;
   line-height: 23px;
+  margin: 2px;
 }
 
 .popular {
   display: flex;
   flex-direction: column;
   height: auto;
-  margin: 0 20px;
+  margin: 10px 20px 0;
 }
 .popular .title {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 .popular .title .text {
   margin: 0;
@@ -483,8 +498,20 @@ h2, span {
     font-size: 30px;
   }
 
+  .search .dropdown {
+    margin-left: -50px;
+  }
+
   .secciones {
     margin: 20px;
+  }
+
+  .popular{
+    margin: 0 20px;
+  }
+
+  .popular .title{
+    margin: 0 0 20px;
   }
 
   .popular .title .text {
