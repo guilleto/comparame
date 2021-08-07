@@ -235,6 +235,9 @@ h2, span {
   width: 100%;
   border-radius: 20px;
 }
+.popular .content-card .popular-card .info{
+  width: 100%;
+}
 .popular .content-card .popular-card .info .name {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -269,6 +272,14 @@ h2, span {
   line-height: 23px;
   margin: 10px 0 20px 10px;
 }
+
+.popular .content-card .popular-card .ctn-action{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: -75px 10px 20px;
+}
+
 .popular .content-card .popular-card .favorito .far {
   font-size: 20px;
   color: #ff4f5a;
@@ -528,9 +539,6 @@ h2, span {
   width:100%;
 }
 
-.ctn-action{
-  display: flex; 
-}
 .ctn-action div{
   margin-right: 10px;
 }
