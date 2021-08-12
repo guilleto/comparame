@@ -1,4 +1,7 @@
 .search-card{
+    border-radius: 5px;
+    box-shadow: 1px 7px 14px -7px grey;
+    margin: 0.5rem;
     width: 200px;
     height: auto;
     flex-direction: column;
@@ -10,15 +13,27 @@
 .search-card .img{
     width: 100%;
 }
+.search-card p{
+    margin:0;
+}
+.search-card .name{
+    margin: 0 0 0 10px;
+}
 * i{
+    font-size: 20px;
     margin: 0.5rem;
     color:#ff4f5a;
 }
 
-.ctn-info{
+.search-card .ubicacion{
+    align-items: center;
+    display: flex;
+}
+.search-card .ctn-info{
+    align-items: center;
+    padding: 0 10px 10px 10px;
     justify-content: space-between;
 }
-
 
 .favorito .fas{
     display: none;
@@ -35,3 +50,5 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+

@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="assets/css/style-template/style-template.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- style slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/slider/sldier.css">
+
+
     <title>Inicio</title>
 </head>
 
@@ -68,295 +74,34 @@
                 Categorias
             </a>
         </div>
-
-        <!-- <div class="filtrer">
-            <i class="fas fa-sliders-h"></i>
-        </div> -->
     </section>
     <section class="container-content">
-
-        <!-- <section class="secciones">
-            <h2 class="destok title-category">Categorias</h2>
-            <div class="cont-secciones">
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-                <div class="section">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p class="text">Lacteos</p>
-                </div>
-            </div>
-            <div class="destok">
-                <h2>Rango
-                    <span>
-                        precio
-                    </span>
-                </h2>
-                <div class="range-price">
-                    <span>0</span>
-                    <input type="range" id="range_Price" min="0" max="50000">
-                    <span>50.000</span>
-                </div>
-                <div class="price-total" id="result_price"></div>
-                    <h2>Estrellas</h2>
-                    <div class="star">
-                        <div class="star" id="Uno">1 - 2</div>
-                        <div class="star" id="Dos">3</div>
-                        <div class="star" id="Tres">4 - 5</div>
-                    </div>
-                    </div>
-        </section> -->
         <section class="container-offert" id="container-search">
-
             <section class="popular">
                 <div class="title">
-                    <p class="text">Productos populares</p>
+                    <p class="text">Productos</p>
                 </div>
-                <div class="content-card" id="content-cards">
-                    <!--  <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
+                <div class="content-card swiper-container mySwiper" >
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper" id="content-cards">
+                          <!-- Slides -->
                         </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div> 
-                    </div>
-                    <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>  
-                    </div>
-                    <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div> 
-                    </div>
-                    <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div> 
-                    </div>
-                    <div class="popular-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div> -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                 </div>
             </section>
-            <section class="ofertas">
+            <section class="popular">
                 <div class="title">
-                    <p class="text">Productos en oferta</p>
+                    <p class="text">Productos destacados</p>
                 </div>
-                <div class="content-card">
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="ofertas-card">
-                        <img class="img" src="./assets/img/huevos.jpg" alt="">
-                        <div class="info">
-                            <p class="name">Gaseosa</p>
-                            <div class="ubicacion">
-                                <i class="fas fa-location-arrow"></i>
-                                <p class="tienda">Exito, Soacha</p>
-                            </div>
-                            <p class="precio">$5000</p>
-                        </div>
-                        <div class="favorito">
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                        </div> 
-                        <div class="add">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
+                <div class="content-card  outstanding-swiper">
+                    <div class="swiper-wrapper" id="ctn-outstanding">
+                        <!-- Slides -->
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-pagination"></div>
                 </div>
             </section>
         </section>
@@ -432,10 +177,15 @@
     <script src="assets/Swalert/sweetalert2.all.min.js"></script>
     <script src="assets/js/api-leaflet.js"></script>
     <script src="assets/js/close-section.js"></script>
+    <!-- script slider -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="assets/js/sliders/sliders.js"></script>
     <script src="assets/js/home/home.js"></script>
     <script src="assets/js/search/search-api.js"></script>
     <script src="assets/js/favoritos/favoritos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

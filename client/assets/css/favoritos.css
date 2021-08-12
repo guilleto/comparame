@@ -72,7 +72,21 @@ body {
   line-height: 30px;
   border-bottom: 1px solid #bc343e;
 }
+.empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-empty{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
 
+}
+.img-empty{
+  border-radius: 44px;
+    object-fit: cover;
+    width: 241px;
+}
 .favoritos {
   height: auto;
   margin: 0 0 0 20px;
@@ -90,6 +104,7 @@ body {
   line-height: 23px;
 }
 .favoritos .content-card {
+  height: 60vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -97,12 +112,12 @@ body {
 }
 .favoritos .content-card .favoritos-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: max-content;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 80%;
+  margin: 10px;
   max-width: 200px;
-  margin: 0 20px 20px 0;
   border-radius: 20px;
   box-shadow: 1px 7px 14px -7px gray;
   cursor: pointer;
@@ -111,13 +126,23 @@ body {
   width: 100%;
   border-radius: 20px;
 }
-.favoritos .content-card .favoritos-card .info .name {
+.favoritos .content-card .favoritos-card .name {
+  text-align: start;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: black;
   line-height: 23px;
   margin: 5px 0 0 10px;
+}
+.favoritos-card .ctn-informacion{
+  width: 100%;
+align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.favoritos-card .fa-trash-alt{
+  margin: 1rem;
 }
 .favoritos .content-card .favoritos-card .info .ubicacion {
   display: flex;

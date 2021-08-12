@@ -16,7 +16,6 @@ body header{
     display:flex;
 }
 .container-sm p{
-    max-width: 250px;
     margin-left: 1rem;
 }
 /* .container-sm input:checked{
@@ -30,7 +29,9 @@ h1{
     text-align: center;
     margin:3rem;
 }
-
+a{
+    text-decoration: none;
+}
 .info-coords,.container-coords{
     display: none;
 }

@@ -31,16 +31,15 @@ let userToken = localStorage.getItem('key-user')
 let token = localStorage.getItem('validation')
 ctn_card_feautered.addEventListener('click',(e)=>{
     // console.log(e.target.className)
-    if(e.target.className === "far","fas"){
-        // console.log('favorito');
+    if(e.target.className == "fas fa-heart"){
+        // console.log('name clase ' + e.target.className);
         if(token && token != null){
-      
             // console.log(e.target)
             let _id = e.target.parentNode.id
            add_Favoritos(_id,userToken)
             
         }
-        if(user_token , token==null){
+        if(userToken==null){
             Swal.fire({
                 icon:'error',
                 title:'Debes iniciar  seccion',

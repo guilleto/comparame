@@ -9,6 +9,6 @@ var requestOptions = {
 };
 
 fetch("https://comparame-api.herokuapp.com/supermarket/headsquareNear/608f353001889d4583314803?lat=6.3115012&lon=-75.6772137&distance=10", requestOptions)
-  .then(response => response.text())
+  .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));

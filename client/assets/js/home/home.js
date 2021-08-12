@@ -3,7 +3,7 @@
 const template_product = (array,destino)=>{
     array.forEach((element)=>{
         let card_product = document.createElement('div');
-        card_product.className = "popular-card";
+        card_product.className = "popular-card swiper-slide";
 
         let img = document.createElement('img');
         img.className = "img"
@@ -83,15 +83,14 @@ const ctn_card_feautered = document.getElementById('content-cards');
 
 
 window.onload = ()=>{
-    
     fetch("https://comparame-api.herokuapp.com/product")
       .then(response => response.json())
       .then(result =>{
            console.log(result)
-            template_product(result.data,ctn_card_feautered)
-
-
-
+           if(result.status){
+               template_product(result.data,ctn_card_feautered)
+               run_sliders_products()
+           }
         }).catch(error => console.log('error', error));
 }
 
@@ -104,3 +103,20 @@ const recortar_text = (text)=>{
         return text
     }
 }
+const ctn_outstanding = document.getElementById('ctn-outstanding')
+
+const print_outstanding =  ()=>{
+    fetch("https://comparame-api.herokuapp.com/product")
+    .then(response => response.json())
+    .then(result =>{
+        //  console.log(result)
+         const product_outstanding = result.data.filter((element)=>{
+            return element.product_feautered
+         })
+        //  console.log(product_outstanding)
+          template_product(product_outstanding,ctn_outstanding)
+          run_slider_outstanding()
+      }).catch(error => console.log('error', error));
+}
+
+print_outstanding()

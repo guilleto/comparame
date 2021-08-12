@@ -1,0 +1,15 @@
+
+.swiper-container {
+    width: 100%;
+    height: 250px;
+}
+
+.swiper-slide{
+    max-width: 210px;
+}
+.swiper-pagination-fraction, 
+.swiper-pagination-custom, 
+.swiper-container-horizontal > 
+.swiper-pagination-bullets {
+    bottom: 0;
+}

@@ -22,7 +22,7 @@ form_login_requet.addEventListener('submit', (e) => {
     .then(result => {
       if (!result.status) {
         alert('Informacion invalidad ')
-        window.location.reload();
+        // window.location.href('')
       }
       if (result.status) {
         localStorage.setItem('datos-log', JSON.stringify(result))
@@ -85,7 +85,7 @@ form_change_rol.addEventListener('submit', (e) => {
           }
         )
         // alert("Uuups.. Hay problemas, Te faltaron campos por llenar")
-        Window.reload()
+        // Window.reload()
       }
     }) 
     .catch(error =>{

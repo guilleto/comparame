@@ -7,9 +7,17 @@ const request_search = (keyword,max,min)=>{
     .then(result =>{ 
         console.log(result)
         ctn_search.innerHTML = "";
-        template_get_products(result.data)
+        if(result.data.length==0){
+            ctn_search.innerHTML= template_no_found(keyword)
+        }
+        if(result.status){
+            template_get_products(result.data)
+        }
     })
-    .catch(error => console.log('error', error));
+    .catch(error =>{ 
+        console.log('error', error)
+        ctn_search.innerHTML = template_error()
+    });
 }
 
 
@@ -34,7 +42,7 @@ const template_get_products = (array)=>{
         info.className= "info";
 
         let name = document.createElement('p');
-        name.textContent = element.product_name;
+        name.textContent = recortar_text(element.product_name);
         name.className = "name";
 
         let ubicacion = document.createElement('div');
@@ -47,8 +55,8 @@ const template_get_products = (array)=>{
         discount.textContent =  element.product_discount + " %" ;
         discount.className = "tienda";
         
-        ubicacion.appendChild(location);
         ubicacion.appendChild(discount); 
+        ubicacion.appendChild(location);
 
         let precio = document.createElement('p');
         precio.className = "precio";
@@ -89,8 +97,7 @@ const template_get_products = (array)=>{
         ctn_action.className = "ctn-action"
         ctn_action.appendChild(favorito)
         ctn_action.appendChild(add)
-        
-        
+                
         ctn_info.appendChild(info)
         ctn_info.appendChild(ctn_action)
 
@@ -98,22 +105,19 @@ const template_get_products = (array)=>{
         card_product.appendChild(name);
         card_product.appendChild(ctn_info);
 
-
-
         // card_product.appendChild(add);
-
-
-
-
         ctn_search.appendChild(card_product)
         
     })
 }
 
+//---------------filter------------
 
+
+let minPrice = "";
+let maxPrice = "";
 
 //manipular y mostrar valor maximo y minimo
-
 
 const ctn_maximo = document.getElementById('value-max');
 const ctn_minimo = document.getElementById('value-min');
@@ -133,8 +137,19 @@ range_min.addEventListener('change',()=>{
 })
 
 
-//---------------filter------------
 
 
-let minPrice = "";
-let maxPrice = "";
+const template_no_found = (name)=>{
+    return `
+    <div class="no-found">
+        <h2>No se encontro productos por el nombre: ${name}</h2>
+        <img src="assets/img/error404"
+    </div>`
+}
+
+const template_error = ()=>{
+   return `<div class="error">
+        <h2>Uups!, parece que hubo un error vuelve a intentarlo</h2>
+        <img src="assets/img/error"
+    </div>`
+} 
