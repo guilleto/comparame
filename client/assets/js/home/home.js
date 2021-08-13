@@ -53,9 +53,9 @@ const template_product = (array,destino)=>{
 
         let add = document.createElement('div');
         add.className = "add";
-
         let plus = document.createElement('i');
         plus.className = "fas fa-plus";
+        plus.id = element._id
 
         add.appendChild(plus);
         

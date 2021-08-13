@@ -9,9 +9,11 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="./assets/css/miLista.css">
+    <link rel="stylesheet" href="./assets/css/mylist/miLista.css">
     <link rel="stylesheet" href="assets/css/style-main-index.css">
     <link rel="stylesheet" href="assets/css/style-loader.css">
+    <link rel="stylesheet" href="assets/Swalert/sweetalert2.min.css">
+    
     <title>Mi lista</title>
 </head>
 
@@ -43,115 +45,10 @@
             <div class="title">
                 <p class="text">MI LISTA</p>
             </div>
-            <div class="content-card">
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
-                <div class="miLista-card">
-                    <img class="img" src="./assets/img/huevos.jpg" alt="">
-                    <div class="info">
-                        <p class="name">Gaseosa</p>
-                        <div class="ubicacion">
-                            <i class="fas fa-location-arrow"></i>
-                            <p class="tienda">Exito, Soacha</p>
-                        </div>
-                        <p class="precio">$5000</p>
-                    </div>
-                    <div class="favorito">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="eliminar">
-                        <i class="far fa-trash-alt"></i>
-                    </div> 
-                </div>
+            <button class="btn-create" onclick="show_create_list()">Crear nueva lista</button>
+            <div id="ctn-create"></div>
+            <div class="content-card" id="ctn-my-list">
+                <div class="content-table" id="ctn-table"></div>    
             </div>
         </section>
         <footer class="footer">
@@ -174,8 +71,10 @@
         <div class="ctn-loader" id="ctn-loader">
             <div class="loader"></div>
         </div>
+        <script src="assets/Swalert/sweetalert2.all.min.js"></script>
         <script src="assets/js/protected.js"></script>
         <script src="assets/js/close-section.js"></script>
+        <script src="assets/js/myList/myList.js"></script>
     </body>
     
     </html>

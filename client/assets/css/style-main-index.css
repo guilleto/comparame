@@ -131,6 +131,16 @@
 
 }
 
+.no-found,.error{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
+.no-found img{
+  width: 200px;
+}
+.error img{
+  width: 200px;
+}
 /*# sourceMappingURL=style-main-index.css.map *

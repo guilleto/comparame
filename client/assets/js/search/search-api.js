@@ -143,13 +143,13 @@ const template_no_found = (name)=>{
     return `
     <div class="no-found">
         <h2>No se encontro productos por el nombre: ${name}</h2>
-        <img src="assets/img/error404"
+        <img src="assets/img/error404.png"
     </div>`
 }
 
 const template_error = ()=>{
    return `<div class="error">
         <h2>Uups!, parece que hubo un error vuelve a intentarlo</h2>
-        <img src="assets/img/error"
+        <img src="assets/img/error-500.png"
     </div>`
 } 
