@@ -1,15 +1,40 @@
 
 .swiper-container {
     width: 100%;
-    height: 250px;
+    height: 355px;
 }
 
 .swiper-slide{
+  height: 80%;
     max-width: 210px;
 }
 .swiper-pagination-fraction, 
 .swiper-pagination-custom, 
 .swiper-container-horizontal > 
 .swiper-pagination-bullets {
-    bottom: 0;
+    bottom: 15px;
+}
+
+.swiper-button-prev {
+  top: 329px;
+  z-index: 15;
+  left: 150px;
+}
+
+.swiper-button-next {
+  top: 329px;
+  z-index: 15;
+  right: 150px;
+}
+
+.content-card {
+  height: 355px;
+}
+
+.prev_2 {
+  top: 373px;
+}
+
+.next_2{
+  top: 373px;
 }

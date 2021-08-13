@@ -23,7 +23,7 @@ const template_product = (array,destino)=>{
         location.className = " fas fa-location-arrow"; 
 
         let discount = document.createElement('p');
-        discount.textContent =  element.product_discount + " %" ;
+        discount.textContent = element.product_discount==0?"":  element.product_discount + " %" ;
         discount.className = "tienda";
         
         ubicacion.appendChild(location);

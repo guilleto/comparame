@@ -12,9 +12,10 @@
 
   .container-content {
     display: flex;
+    min-height: 50vh;
   }
   .container-content .container-offert {
-    width: 60vw;
+    width: 63vw;
     overflow: hidden;
   }
   .container-content .tiendas {
@@ -115,6 +116,7 @@
   .popular {
     margin: 20px;
     max-width: 90%;
+    height: 400px;
   }
 
   .footer {
@@ -142,5 +144,8 @@
 }
 .error img{
   width: 200px;
+}
+.fas .fa-location-arrow{
+  opacity: 1;
 }
 /*# sourceMappingURL=style-main-index.css.map *

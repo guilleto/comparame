@@ -41,7 +41,7 @@ const create_list = () =>{
                      })
                      setTimeout(()=>{
                          window.location.reload()
-                     })
+                     },3000)
                  }else{
                     Swal.fire({
                         icon:"error",

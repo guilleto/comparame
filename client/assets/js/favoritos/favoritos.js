@@ -29,7 +29,7 @@ const add_Favoritos = (id,token)=>{
 
 let userToken = localStorage.getItem('key-user')
 let token = localStorage.getItem('validation')
-ctn_card_feautered.addEventListener('click',(e)=>{
+ctn_search.addEventListener('click',(e)=>{
     // console.log(e.target.className)
     if(e.target.className == "fas fa-heart"){
         // console.log('name clase ' + e.target.className);

@@ -3,7 +3,7 @@
     box-shadow: 1px 7px 14px -7px grey;
     margin: 0.5rem;
     width: 200px;
-    height: auto;
+    height: 250px;
     flex-direction: column;
 }
 .ctn-action,.search-card,.ctn-info{

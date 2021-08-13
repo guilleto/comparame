@@ -180,4 +180,7 @@ nav .menu-link-pages button:active {
 .update, .delete, .add {
   display: none;
 }
+.none {
+  display: none !important;
+}
 /*# sourceMappingURL=style-page-mall.css.map */

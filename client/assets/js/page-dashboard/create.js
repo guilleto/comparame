@@ -1,10 +1,10 @@
-body = {
-    "supermarketID": "608f353001889d4583314803",
-    "product_name": "Huevos",
-    "product_price": 17000,
-    "product_discount": 0,
-    "product_feautered": false
-}
+// body = {
+//     "supermarketID": "608f353001889d4583314803",
+//     "product_name": "Huevos",
+//     "product_price": 17000,
+//     "product_discount": 0,
+//     "product_feautered": false
+// }
 
 
 
