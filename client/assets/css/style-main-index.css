@@ -14,7 +14,7 @@
     display: flex;
   }
   .container-content .container-offert {
-    width: 60vw;
+    width: 63vw;
     overflow: hidden;
   }
   .container-content .tiendas {
@@ -115,6 +115,7 @@
   .popular {
     margin: 20px;
     max-width: 90%;
+    height: 400px;
   }
 
   .footer {
