@@ -66,14 +66,14 @@ form_change_rol.addEventListener('submit', (e) => {
   // window.open('./page-supermarkert.html');
 
   fetch("https://comparame-api.herokuapp.com/user/upgradeToSupermarker", requestOptions)
-    .then(response => response.text())
+    .then(response => response.json())
     .then(result =>{
       console.log(result)
       if(result.status){
           Swal.fire({
               icon: 'success',
               title: 'Operacion exitosa',
-              text: 'Crea tu punto fisico'
+              text: 'Ahora puedes comenzar a administrar tu supermercado'
           })
         window.location.replace('./page-supermarkert.html')
       }else{
@@ -99,3 +99,6 @@ form_change_rol.addEventListener('submit', (e) => {
     })
 
 })
+
+
+

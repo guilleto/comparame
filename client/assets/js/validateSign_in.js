@@ -1,4 +1,4 @@
-//inicialiar variables
+ //inicialiar variables
 const input_password_sign = document.getElementById('input-password')
 const input_email = document.getElementById('input_email')
 const form_sign = document.getElementById('form-sign')

@@ -197,12 +197,12 @@ h2, span {
   height: auto;
   margin: 10px 20px 0;
 }
-.popular .title {
+.title {
   display: flex;
   justify-content: space-between;
   margin: 0 0 10px 0;
 }
-.popular .title .text {
+ .title .text {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -544,4 +544,17 @@ h2, span {
 .ctn-action div{
   margin-right: 10px;
 }
+
+
+.dropdown-menu.show{
+  width: 300px;
+} 
+.dropdown-menu.show li{
+  display: flex;
+}
+
+.dropdown-menu.show p{
+  width: 50% !important;
+}
+
 /*# sourceMappingURL=index.css.map */
